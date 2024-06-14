@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Functions and Array</h1>
+</body>
+<script>
+
+
+
+
+    /************************************************************************************************/
+
+    let array = [1234, 34567, 345, 678, 5678,]
+    let result1 = array.push(260320)
+    document.write(array + "<br>");
+    let result2 = array.pop()                   // removes an element at the end of an array
+    document.write(array + "<br>");
+    let result3 = array.unshift("070602")   // insert an element a begininof an array
+    document.write(array + "<br>");
+
+    /************************************************************************************************/
+
+    /* assign in array */
+
+    let num1 = parseInt(prompt("Enter a Number 1"));
+    let num2 = parseInt(prompt("Enter a Number 2"));
+    let symbol = prompt("Enter Your A Symbol");
+    switch (symbol) {
+        case "+": let addition = add(num1, num2);
+            alert(addition)
+            break;
+        case "-": let subtraction = sub(num1, num2);
+            alert(subtraction)
+            break;
+        case "*": let multiplaction = mul(num1, num2);
+            alert(multiplaction)
+            break;
+        case "/": let division = div(num1, num2);
+            alert(division)
+            break;
+        case "%": let modulus = mod(num1, num2);
+            alert(modulus)
+            break;
+        default: alert(" Enter A Valid Symbol")
+
+    }
+    function add(a, b) {
+        let c = a + b;
+        return c;
+    }
+    function sub(a, b) {
+        let c = a - b;
+        return c;
+    }
+    function mul(a, b) {
+        let c = a * b;
+        return c;
+    }
+    function div(a, b) {
+        let c = a / b;
+        return c;
+    }
+    function mod(a, b) {
+        let c = a % b;
+        return c;
+    }
+    /************************************************************************************************/
+</script>
+
+</html>
