@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="msg"></h1>
+
+    <h1>Control Statements if, else, else if , switch cases </h1>
+    <h1 id="text"></h1>
+</body>
+<script>
+
+
+
+
+
+    // // assignment 1
+    // let name = "xxx";
+    // let psw = "yyy";
+
+    // let username = prompt("ENTER YOUR NAME")
+
+    // let userPassword = prompt("Enter your password");
+
+    // if (name === username && psw === userPassword) {
+    //     alert("loged in")
+    // }
+    // else {
+    //     alert("check the pswd")
+    // }
+
+    /*==============================================================================*/
+    // //assignment2
+
+    // let num1 = parseInt(prompt("Enter Number 1"));
+    // let num2 = parseInt(prompt("Enter number 2 "))
+
+
+    // if (num1 > num2) {
+    //     alert("num one is greater")
+    // } else {
+    //     alert("num2 is greater")
+    // }
+
+    /*==============================================================================*/
+
+    // //assignment3
+    // let age = parseInt(prompt("Enter your Age "))
+
+    // if (age > 18) {
+    //     alert(" You are Eligible to Vote");
+    // } else {
+    //     alert(" You are Not Eligible To vote")
+    // }
+
+
+    /*==============================================================================*/
+
+    // // assignment 4
+    // let num1 = parseInt(prompt("Enter Number 1"));
+    // let num2 = parseInt(prompt("Enter number 2 "))
+
+    // if (num1 === num2) {
+    //     alert("both are equal")
+    // } else {
+    //     alert("botha are not equal")
+    // }
+
+    /*==============================================================================*/
+
+
+    // //assignment 5
+    // let num = parseInt(prompt("Enter The Number"))
+    // if (num % 2 == 0) {
+    //     alert("Number is even")
+    // } else {
+    //     alert("Number is Odd")
+    // }
+
+    /*==============================================================================*/
+
+    // //Assignment 6
+    // let alp = prompt("Enter  a letter From A to Z")
+    // let vowel = ['A', 'E', 'I', ' O', 'U']
+
+    // if (alp == 'A' || alp == 'E' || alp == 'I' || alp == 'O' || alp == 'U') {
+    //     alert("It is a Vowel")
+    // } else {
+    //     alert("It's NOT a Vowel")
+    // }
+
+    /*==============================================================================*/
+
+    // let num1 = 10;
+    // let num2 = 20;
+
+    // if (num1 > 0 && num2 > 0) {
+    //     alert("both are positive")
+    // }
+    // else if (num1 > num3) {
+    //     alert("num1 is greater")
+    // }
+    // else if (num1 > num3) {
+    //     alert("num1 is greater")
+    // } else if (num1 === num2) {
+    //     alert("greater")
+    // }
+
+    /*==============================================================================*/
+
+
+    // 1)find greatest among three values
+
+    //  a. collect 3 values from the user
+    //  b.write the condition for a is big or b is big or c is big
+
+
+    // let a = parseInt(prompt("Enter value A "));
+    // let b = parseInt(prompt("Enter  value  B"));
+    // let c = parseInt(prompt("Enter c value  C "));
+
+
+    // if (a > b && a > c) {
+    //     alert("A is greater");
+    // } else if (b > a && b > c) {
+    //     alert("B is greater");
+    // }
+    // else if (c > a && c > b) {
+    //     alert("C is greater");
+    // }
+    // else {
+    //     alert("There is a tie")
+    // }
+
+
+    /*==============================================================================*/
+
+    // 1.get the mark from the user out of 100 per subject
+    // 2.if the mark 90 to 100 ->'A grade'   //mark>90 && mark<=100
+    // 3.if the mark 80 to 90  ->'B Grade'
+    // 4.if the mark 70 to 80  ->'C Grade'
+    // 5.if the mark 60 to 70  ->'D Grade'
+    // 6.if the mark 50 to 60  ->'E Grade'
+    // 7.below 50              ->Fail Better luck next time
+
+
+
+    // let mark = parseInt(prompt("Enter the Marks"));
+    // if (mark > 90 && mark <= 100) {
+    //     alert("A Grade")
+    // }
+    // else if (mark > 80 && mark <= 90) {
+    //     alert("B Grade")
+    // }
+    // else if (mark > 70 && mark <= 80) {
+    //     alert("C Grade")
+    // }
+    // else if (mark > 60 && mark <= 70) {
+    //     alert("D Grade")
+    // }
+    // else if (mark > 50 && mark <= 60) {
+    //     alert("E Grade")
+    // }
+    // else {
+    //     alert("Fail Better luck next time")
+    // }
+
+    /*==============================================================================*/
+
+    // Get amount from the customer.
+    // Based on the amount print mobile names.
+
+    // 1.get the totalmark from the user out of 500 per Term
+    // 2.if the mark 450 to 500 -> '100% S.c'   totlamark >= 450 && totlamark <= 500  100 % s.c
+    // 3.if the mark 400 to 450 -> '75% s.c'
+    // 4.if the mark 350 to 400 -> '50% s.c'
+    // 5.if the mark 300 to 350 -> '35% s.c'
+    // 7.below 300 -> Sorry! Better luck next time
+
+    // let marks = parseInt(prompt("Enter The Marks"));
+
+    // if (marks > 450 && marks <= 500) {
+    //     alert("100 %")
+    // }
+    // else if (marks > 400 && marks <= 450) {
+    //     alert("75 %")
+    // }
+    // else if (marks > 350 && marks <= 400) {
+    //     alert("50 %")
+    // }
+    // else if (marks > 300 && marks <= 350) {
+    //     alert("35 %")
+    // }
+    // else {
+    //     alert("Sorry! Better luck next time")
+    // }
+
+    /*==============================================================================*/
+
+
+    // let data = parseInt(prompt("Enter the date"));
+    // let month = parseInt(prompt("Enter the month"));
+    // let year = parseInt(prompt("Enter the year"));
+
+    // if (date > 0 && date < 32) {
+    //     alert(" valid date ")
+    // }
+    // else {
+    //     alert("  In valid  month")
+    // }
+    // if (month > 0 && month < 13) {
+    //     alert(" valid MONTH ")
+    // }
+    // else {
+    //     alert("  IN VALID   month")
+    // }
+    // if (year > 1000 && year < 2001) {
+    //     alert(" a valid year ")
+    // }
+    // else {
+    //     alert(" in valid year")
+    // }
+
+
+    // (data > 0 && data < 32) ? alert(" Valid date ") : alert(" In Valid   date");
+    // (month > 0 && month < 13) ? alert(" Valid Month ") : alert("In Valid   month");
+    // (year > 1000 && year < 2001) ? alert("Valid year ") : alert(" In Valid year");
+
+
+    /*==============================================================================*/
+
+    // let age = parseInt(prompt("Enter Your Age"));
+
+
+    // if (age > 1 && age <=15) {
+    //     alert("Kids")
+    // }
+    // else if (age > 15 && age <=25) {
+    //     alert("Teen age")
+    // }
+    // else if (age > 25 && age <=50) {
+    //     alert("adults")
+    // }
+    // else if (age > 50 && age <=120) {
+    //     alert("grand parents")
+    // }
+    // else {
+    //     alert(" in valid age")
+    // }
+
+    /*==============================================================================*/
+
+    // let umail = prompt("Enter Your mail id");
+    // let upswd = prompt("Enter you password");
+
+
+    // let Student = {
+    //     name: 'RavI',
+    //     mail: 'ravi@gmail.com',
+    //     pswd: '12345',
+    // }
+
+
+    // if (Student.mail === umail) {
+    //     if (Student["pswd"] === upswd) {
+    //         document.getElementById("msg").innerHTML = " Login Sucessfully !"
+    //     }
+    //     else {
+    //         document.getElementById("msg").innerHTML = " Incorrect Password"
+    //     }
+    // }
+    // else {
+    //     document.getElementById("msg").innerHTML = " User Does Not Exit"
+    // }
+
+
+    /*==============================================================================*/
+
+    // let year = parseInt(prompt("Enter the year"));
+
+    //if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+    //     alert("its a leap year")
+    // }
+    // else {
+    //     alert("its not a leap year")
+    // }
+
+
+    // if (year % 4 == 0) {
+    //     if (year % 100 != 0) {
+    //         if (year % 400 == 0) {
+    //             alert("its a leap year")
+    //         }
+    //         else {
+    //             alert("its not a leap year")
+    //         }
+    //     }
+    //     else {
+    //         alert("its not a leap year")
+    //     }
+    // }
+    // else {
+    //     alert("its not a leap year")
+    // }
+
+    /*==============================================================================*/
+    // let menu = parseInt(prompt(" Enter A number from 1 to 4"));
+
+    // if (menu == 1) {
+    //     alert("You Have Selected For Breakfast")
+    // } else if (menu == 2) {
+    //     alert("You Have Selected For Lunch")
+    // }
+    // else if (menu == 3) {
+    //     alert("You Have Selected For snacks")
+    // }
+    // else if (menu == 4) {
+    //     alert("You Have Selected For dinner")
+    // } else {
+    //     alert("Enter a valid number")
+    // }
+
+    /*==============================================================================*/
+
+    // let mark = parseInt(prompt("Enter the Marks"));
+    // if (mark <= 30) {
+    //     alert("Fail")
+    // }
+    // else if (mark > 31 && mark <= 50) {
+    //     alert("Average")
+    // }
+    // else if (mark > 51 && mark <= 70) {
+    //     alert("Good")
+    // }
+    // else if (mark > 60 && mark <= 70) {
+    //     alert("D Grade")
+    // }
+    // else if (mark > 71 && mark <= 90) {
+    //     alert("Excellent")
+    // }
+    // else if (mark > 91 && mark <= 100) {
+    //     alert("Excellent")
+    // }
+    // else {
+    //     alert("Enter a valid marks ")
+    // }
+
+    /*==============================================================================*/
+
+    // let sign = prompt("Enter the sign")
+    // let num1 = parseInt(prompt("Enter the num1"))
+    // let num2 = parseInt(prompt("Enter the num2"))
+
+    // switch (sign) {
+    //     case '+':
+    //         alert(num1 + num2);
+    //         break;
+    //     case '-':
+    //         alert(num1 - num2);
+    //         break;
+    //     case '*':
+    //         alert(num1 * num2);
+    //         break;
+    //     case '/':
+    //         alert(num1 / num2);
+    //         break;
+    // }
+
+    /*==============================================================================*/
+    // alert('5' + 5 + '35' - '15')
+
+    //alert('20' + 6 - 2 * 3)
+
+
+    /*==============================================================================*/
+    // let letter = prompt("Enter a letter from A-Z");
+
+
+    // switch (letter) {
+    //     case 'A':
+    //         alert("Its is a Vowel");
+    //         break;
+    //     case 'E':
+    //         alert("Its is a Vowel");
+    //         break;
+    //     case 'I':
+    //         alert("Its is a Vowel");
+    //         break;
+    //     case 'O':
+    //         alert("Its is a Vowel");
+    //         break;
+    //     case 'U':
+    //         alert("Its is a Vowel");
+    //         break;
+    //     case 'a':
+    //         alert("Its is a Vowel");
+    //         break;
+    //     case 'e':
+    //         alert("Its is a Vowel");
+    //         break;
+    //     case 'i':
+    //         alert("Its is a Vowel");
+    //         break;
+    //     case 'o':
+    //         alert("Its is a Vowel");
+    //         break;
+    //     case 'u':
+    //         alert("Its is a Vowel");
+    //         break;
+    //     default:
+    //         alert("its not A Vowel");
+    // }
+
+
+
+    // 5 table
+    // for (i = 1; i <= 10; i++) {
+    //     console.log("5 * " + i + "=" + i * 5);
+    // }
+
+
+    // 15 Table
+    // for (i = 1; i <= 10; i++) {
+    //     console.log("15 * " + i + "=" + i * 15);
+    // }
+
+
+    //10 to 1 reverse
+    // for (i = 10; i >= 0; i--) {
+    //     console.log(i);
+    // }
+
+
+    // // multiplaction of 3 and 5
+    // for (i = 1; i <= 100; i++) {
+
+    //     if (i % 3 == 0 && i % 5 == 0) {
+    //         console.log(i + " Multiplication of  3 and 5 table ");
+    //     }
+
+    //     else if (i % 3 == 0) {
+    //         console.log(i + " Multiplication of  3 table ");
+    //     }
+    //     else if (i % 5 == 0) {
+    //         console.log(i + " Multiplication of  5 table ");
+    //     }
+    //     else {
+    //         console.log(i)
+    //     }
+    // }
+
+
+    // divide by 10
+
+    // for (i = 1; i <= 100; i++) {
+    //     if (i % 10 === 0) {
+    //         console.log(i);
+    //     }
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

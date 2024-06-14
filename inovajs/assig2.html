@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text and Image Layout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: cursive;
+        }
+
+        body {
+            justify-content: center;
+            align-items: center;
+            margin: 5%;
+        }
+
+        .container {
+            margin: 100px auto;
+            width: 100%;
+            display: flex;
+            border: 2px solid black;
+        }
+
+        .nav {
+            align-items: flex-end;
+        }
+
+        .text {
+            margin: 40px;
+            text-align: justify;
+        }
+
+        .img {
+            margin: 50px;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body id="darktheme">
+
+    <nav class="nav" id="nav">
+        <ul>
+
+
+            <button onclick="changecolor1()"><i class="fa-regular fa-circle">lIGHT THEME</i></button>
+            <button onclick="changecolor()"><i class="fa-solid fa-circle">DARK THEME</i></button>
+
+        </ul>
+    </nav>
+
+
+
+    <h1 id="texttheme">THEMES</h1>
+    <div class="container">
+        <div class="text" id="text">
+            <h1>SOFTWARE DEVELOPER</h1> <br><br>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci laborum, ipsa,
+                aspernatur fuga animi ullam id reiciendis laudantium modi tempora praesentium incidunt esse delectus
+                eveniet
+                nulla omnis qui, repudiandae ex?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci laborum, ipsa,
+                aspernatur fuga animi ullam id reiciendis laudantium modi tempora praesentium incidunt esse delectus
+                eveniet
+                nulla omnis qui, repudiandae ex?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci laborum, ipsa,
+                aspernatur fuga animi ullam id reiciendis laudantium modi tempora praesentium incidunt esse delectus
+                eveniet
+                nulla omnis qui, repudiandae ex?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci laborum, ipsa,
+                aspernatur fuga animi ullam id reiciendis laudantium modi tempora praesentium incidunt esse delectus
+                eveniet
+                nulla omnis qui, repudiandae ex?
+            </p>
+        </div>
+        <div class="img" id="img">
+            <img src="assets/food.jpeg" alt="">
+        </div>
+    </div>
+
+</body>
+<script>
+    function changecolor() {
+
+        document.getElementById('darktheme').style.color = "white"
+        document.getElementById('darktheme').style.backgroundColor = "grey"
+        document.getElementById('texttheme').innerHTML = "Dark theme"
+    }
+
+    function changecolor1() {
+
+        document.getElementById('darktheme').style.color = "black"
+        document.getElementById('darktheme').style.backgroundColor = "#89C4F4"
+        document.getElementById('texttheme').innerHTML = "light theme"
+    }
+
+
+
+
+</script>
+
+</html>
