@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript String Search</h1>
+    <pre>
+        String Search Methods
+        String indexOf()
+        String lastIndexOf()
+        String search()
+        See Also:
+        Basic String Methods
+        String Templates
+        String match()
+        String matchAll()
+        String includes()
+        String startsWith()
+        String endsWith()
+    </pre>
+
+    <h1 id="demo"></h1>
+</body>
+<script>
+    // let text = "please locate where ' locate' occurs!";
+    // let index = text.indexOf("locate");
+    // document.getElementById("demo").innerHTML = index;
+
+
+    // let text = "please locate where ' locate' occurs!";
+    // let index = text.lastIndexOf("locate");
+    // document.getElementById("demo").innerHTML = index;
+
+
+
+    // let text = "Please locate where 'locate' occurs!";
+    // let index = text.search("locate");
+    // document.getElementById("demo").innerHTML = index;
+
+
+
+    // let text = "Please locate where 'locate' occurs!";
+    // let index = text.search(/occurs/);
+    // document.getElementById("demo").innerHTML = index;
+
+
+    // let text = "The rain in SPain stays mainly in the plain";
+    // const myArr = text.match("ain");
+    // document.getElementById("demo").innerHTML = myArr.length + " " + myArr;
+
+
+
+    //JavaScript Strings The matchAll() Method
+
+    // let text = "I Love Cats. Cats are Very easy to Love. cats  are Very popular"
+    // const iterator = text.matchAll("Cats");
+    // const iterator = text.matchAll(/Cats/gi); //to search case sensitive
+
+    // document.getElementById("demo").innerHTML = Array.from(iterator);
+
+
+    // JavaScript String includes()
+
+    let text = "hello world, welcome to the universe.";
+    document.getElementById("demo").innerHTML = text.includes("world")
+    
+
+</script>
+</script>
+
+</html>

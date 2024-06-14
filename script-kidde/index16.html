@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructor</title>
+</head>
+
+<body>
+    <h1>constructor</h1>
+
+</body>
+<script>
+    // let obj1 = {
+    //     name: "Ravi N",
+    //     class: "10th",
+    //     ph_no: 1234567890,
+    //     read: function () {
+    //         console.log(` ${name} is Reading`)
+    //     }
+    // }
+    // obj1.read();
+
+    let fun1 = function (userName, userClass, userPhone) {
+        this.name = userName;
+        this.class = userClass;
+        this.ph_no = userPhone;
+        this.read = function () {
+            console.log(`${this.name} is reading`);
+        }
+    }
+    let Ravi = new fun1('Ravi N', 'BE', 1234567890);
+    let Ram = new fun1('Ram', 'BCom', 1234567890);
+    let Rakesh = new fun1('Rakesh', 'Bse', 1234567890);
+    let Raju = new fun1('Raju', 'Arts', 1234567890);
+
+    console.log(Ravi.class);
+    console.log(Ravi.name);
+    console.log(Ravi.ph_no);
+    Ravi.read()
+</script>
+
+</html>

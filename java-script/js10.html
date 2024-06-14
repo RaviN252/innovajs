@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Objects and object Properties </h1>
+    <h1 id="demo"></h1>
+
+
+    <h1 id="demo1"></h1>
+</body>
+<script>
+    // const person = { firstName: "John", lastName: "Doe", age: 50, eyeColor: "blue" };
+
+    //object with many properties
+
+    /*
+    const person = {
+        firstName: "Ravi",
+        lastName: "N",
+        DOB: "26/03/2000",
+        age: 23,
+        eyeColor: "blue"
+    };
+
+    document.getElementById("demo").innerHTML = person.firstName + " is " + person.age + " years old. his eye color is " + person.eyeColor ; */
+
+
+    //using This function
+
+    const person = {
+        firstName: "Ravi",
+        lastName: "NS",
+        DOB: "26/03/2000",
+        age: 23,
+        eyeColor: "blue",
+        fullName: function () {
+            return this.firstName + " " + this.lastName;
+        }
+    }
+    document.getElementById("demo1").innerHTML = person.fullName();
+
+
+</script>
+
+</html>
