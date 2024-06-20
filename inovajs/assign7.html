@@ -12,65 +12,133 @@
 </body>
 <script>
 
+    // functons and its type 
+    // Normal function 
+    function functionname() {
+        document.write(" Normal Function " + "<br>")
+    }
+    functionname();
+    /************************************************************************************************/
+    /* 2) Arrow Function*/
+    let Arrowfunction = () => {
+        document.write(" Arrow function" + "<br>")
 
+    }
+    Arrowfunction();
+    /************************************************************************************************/
+    // parametere function 
+
+    let parametere = (num1, num2) => {
+        document.write("Para" + "<br>")
+        document.write(num1 + "<br>")
+        document.write(num2 + "<br>")
+        document.write(num1 + num2 + "<br>");
+
+    }
+    parametere(10, 25)
+
+    /************************************************************************************************/
+    // return function 
+    let returnfunc = () => {
+        let a = 10;
+        let b = 20;
+        let c = a + b;
+        return c;
+    }
+    let store = returnfunc();
+    document.write(store + "<br>")
+
+    // return function from one one function to another function
+
+    let returnfunction = () => {
+        let a = 40;
+        let b = 60;
+        let c = a + b;
+        return c;
+    }
+    let storea = returnfunction();
+    document.write(storea + "<br>")
+
+    let ortherfunction = (a) => {
+        document.write(a)
+    }
+    ortherfunction(storea + "<br>")
 
 
     /************************************************************************************************/
+    // immediately invoked function Execution
 
-    let array = [1234, 34567, 345, 678, 5678,]
-    let result1 = array.push(260320)
-    document.write(array + "<br>");
-    let result2 = array.pop()                   // removes an element at the end of an array
-    document.write(array + "<br>");
-    let result3 = array.unshift("070602")   // insert an element a begininof an array
-    document.write(array + "<br>");
+    /* function callling itself*/
+    // (
+    //     function iife() {
+    //         alert("Immediately Invoked Function Execution")
+    //     }
+    // )();   // not working 
+
+    /************************************************************************************************/
+    // Anonymous Function
+    // instead of using name we can use the variable name it self
+
+    let anonymousfunction = function () {
+        document.write(" Anonymouse Function")
+    }
+    anonymousfunction()
+    /************************************************************************************************/
+
+    // let array = [1234, 34567, 345, 678, 5678,]
+    // let result1 = array.push(260320)
+    // document.write(array + "<br>");
+    // let result2 = array.pop()                   // removes an element at the end of an array
+    // document.write(array + "<br>");
+    // let result3 = array.unshift("070602")   // insert an element a begininof an array
+    // document.write(array + "<br>");
 
     /************************************************************************************************/
 
     /* assign in array */
 
-    let num1 = parseInt(prompt("Enter a Number 1"));
-    let num2 = parseInt(prompt("Enter a Number 2"));
-    let symbol = prompt("Enter Your A Symbol");
-    switch (symbol) {
-        case "+": let addition = add(num1, num2);
-            alert(addition)
-            break;
-        case "-": let subtraction = sub(num1, num2);
-            alert(subtraction)
-            break;
-        case "*": let multiplaction = mul(num1, num2);
-            alert(multiplaction)
-            break;
-        case "/": let division = div(num1, num2);
-            alert(division)
-            break;
-        case "%": let modulus = mod(num1, num2);
-            alert(modulus)
-            break;
-        default: alert(" Enter A Valid Symbol")
+    // let num1 = parseInt(prompt("Enter a Number 1"));
+    // let num2 = parseInt(prompt("Enter a Number 2"));
+    // let symbol = prompt("Enter Your A Symbol");
+    // switch (symbol) {
+    //     case "+": let addition = add(num1, num2);
+    //         alert(addition)
+    //         break;
+    //     case "-": let subtraction = sub(num1, num2);
+    //         alert(subtraction)
+    //         break;
+    //     case "*": let multiplaction = mul(num1, num2);
+    //         alert(multiplaction)
+    //         break;
+    //     case "/": let division = div(num1, num2);
+    //         alert(division)
+    //         break;
+    //     case "%": let modulus = mod(num1, num2);
+    //         alert(modulus)
+    //         break;
+    //     default: alert(" Enter A Valid Symbol")
 
-    }
-    function add(a, b) {
-        let c = a + b;
-        return c;
-    }
-    function sub(a, b) {
-        let c = a - b;
-        return c;
-    }
-    function mul(a, b) {
-        let c = a * b;
-        return c;
-    }
-    function div(a, b) {
-        let c = a / b;
-        return c;
-    }
-    function mod(a, b) {
-        let c = a % b;
-        return c;
-    }
+    // }
+    // function add(a, b) {
+    //     let c = a + b;
+    //     return c;
+    // }
+    // function sub(a, b) {
+    //     let c = a - b;
+    //     return c;
+    // }
+    // function mul(a, b) {
+    //     let c = a * b;
+    //     return c;
+    // }
+    // function div(a, b) {
+    //     let c = a / b;
+    //     return c;
+    // }
+    // function mod(a, b) {
+    //     let c = a % b;
+    //     return c;
+    // }
     /************************************************************************************************/
 </script>
 

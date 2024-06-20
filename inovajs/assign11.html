@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6</title>
+</head>
+
+<body>
+    <h1>ES6 concepts</h1>
+    <br>
+    <h3>ES6 new Keywords </h3>
+
+</body>
+
+<script>
+    /**********************************************************************************/
+    /* Concept Name:let
+    Used For : we can re initialised but we cannot re declaration is not possible*/
+    /**********************************************************************************/
+    /* Concept Name: const
+    Used For : we can only initialize */
+    /**********************************************************************************/
+    /* Concept Name: spread operatots (...) is denoting symbol
+    1)Used For : used to un pack the arrayof an iterable object and pack the array
+    2) it will spread out the array element into a normal element */
+
+    let arr = [19, 23, 34, 56, 65, 86]
+    console.log(arr)
+
+    let copy = [...arr]
+    console.log(copy)
+
+    let arr1 = ["str", "str1", "str2", "str3", "str4"]
+    console.log(arr1)
+    let mergearr = [...arr, ...arr1]
+    console.log(mergearr)
+    /**********************************************************************************/
+    /* Concept Name: rest operator
+    Used For : the rest operatot packs the normal elelments in to an array*/
+
+    function params(a, b, ...c) {
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        console.log(c[1]);
+
+    }
+    params(12, 23, 56, 34, 60)
+    /**********************************************************************************/
+    /* Concept Name:for in, for of
+    Used For :
+    The for...in loop is used to iterate over the enumerable properties of an object. 
+    It goes through all the keys (property names) of the object 
+    *Iterates over the keys (property names) of an object.
+    *Should not be used to iterate over arrays if the order of iteration is important.
+    
+    for of The for...of loop is used to iterate over the values of an iterable object (like arrays, strings, maps, sets, etc.).
+    It goes through the values of the iterable.
+    *Iterates over the values of an iterable object.
+    * Useful for arrays, strings, maps, sets, and other iterable objects.
+    *Maintains the order of iteration. 
+    */
+
+
+    let array = [1, 3, 5, 6, 7, , 9, 20, 45, 80]
+
+    for (let i in arr) {
+        console.log([i])
+    }
+
+    for (let j of arr) {
+        console.log(j)
+    }
+    /**********************************************************************************/
+    /* Concept Name: array destructiring
+    Used For : it is*/
+    let arra = [1, 3, 5, 6, 7, 0, 9, 20, 45, 80]
+
+    let a = arra[0]
+    let b = arra[1]
+    let c = arra[2]
+    let d = arra[3]
+    let e = arra[4]
+    let f = arra[5]
+    console.log(a, b, c, d, e, f)  // this is difficult to get so we ned to use the array destructuring
+
+    let [a1, b1, c1, d1, e1, f1, g1, h1] = arra
+    console.log(a1, b1, c1, d1, e1, f1, g1, h1) // as we can see last time we had written in 6 lines but now we had written only 2 lines 
+
+    let [a2, b2, c2, ...d2] = arra
+    console.log(a2)
+    console.log(b2)
+    console.log(c2)
+    console.log(...d2)
+
+    /**********************************************************************************/
+    /* Concept Name: object destructing
+    Used For :
+    */
+    let obj = {
+        name: "Ravi N",
+        num: 1234567,
+        email: "ravi@gmail.com"
+    }
+    let uname = obj.name;
+    console.log(uname)
+    let unum = obj.num;
+    console.log(unum) // as its taking a lot of lines
+
+    // we should use oblect literals 
+    let { name: usname, num: usnum, email: usemail } = obj
+    console.log(usname, usemail, usnum) // or else we can also use in diffrent format
+
+    let { name, num, email } = obj;
+    console.log(name, num, email)
+
+    /**********************************************************************************/
+    /* Concept Name:
+    Used For :*/
+    /**********************************************************************************/
+    /* Concept Name:
+    Used For :*/
+    /**********************************************************************************/
+    /* Concept Name:
+    Used For :*/
+    /**********************************************************************************/
+    /* Concept Name:
+    Used For :*/
+    /**********************************************************************************/
+    /* Concept Name:
+    Used For :*/
+    /**********************************************************************************/
+    /* Concept Name:
+    Used For :*/
+    /**********************************************************************************/
+    /* Concept Name:
+    Used For :*/
+    /**********************************************************************************/
+    /* Concept Name:
+    Used For :*/
+    /**********************************************************************************/
+    /* Concept Name:
+    Used For :*/
+
+</script>
+
+</html>

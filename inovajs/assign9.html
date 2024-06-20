@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2> String Methods in java script</h2>
+
+</body>
+<script>
+    /*************************************************************************************************/
+    // Methiod name : split method 
+    // used for : used to split the string in to the character
+    let str1 = "How Are You RaviN"
+    let result1 = str1.split('')
+    document.write(result1 + "<br>")
+    console.log(result1)
+    let result02 = str1.split(' ')
+    document.write(result02 + "<br>")
+    console.log(result02)
+    let result03 = str1.split(',')
+    console.log(result03)
+    document.write(result03 + "<br>")
+    /*************************************************************************************************/
+    // Methiod name : char at
+    // used for : used to find the chararcter in the given position
+    let str2 = "How Are You RaviN"
+    // let result2 = str2.charAt(0)
+    // let result2 = str2.charAt(4)
+    let result2 = str2.charAt(8)
+    document.write(result2 + "<br>")
+    /*************************************************************************************************/
+    // Methiod name : to upper case
+    // used for : used to convert all lower case to upercase
+    let str3 = "How Are You RaviN"
+    let result3 = str3.toUpperCase('')
+    document.write(result3 + "<br>")
+    /*************************************************************************************************/
+    // Methiod name : to lower case 
+    // used for : used to convet all upper case to lower case 
+    let str4 = "How Are You RaviN"
+    let result4 = str4.toLowerCase('')
+    document.write(result4 + "<br>")
+    /*************************************************************************************************/
+    // Methiod name : sub string 
+    // used for : used to find the sub string from one string
+    let str5 = "How Are You RaviN"
+    let result5 = str1.substring(0, 6)
+    document.write(result5 + "<br>")
+    /*************************************************************************************************/
+    // Methiod name : replacement
+    // used for : used to find the chararcter in the given position
+    let str6 = "How Are You RaviN"
+    let result6 = str6.replace("How", "hi")
+    document.write(result6 + "<br>")
+    // it is a case sensitive w ecannot add small letter and change capital letter  it should match example 
+
+    let result06 = str6.replace("how", "hi")
+    document.write(result06 + "<br>")   // no output is seen beacause its is case sensitive 
+    /*************************************************************************************************/
+    // regex in javascript regular expression  used to match character combination in string replace match and search
+    // Methiod name :  search
+    // used for : this method accepts regualr expresssion and returns the index of the first match in a string 
+    let str7 = "How Are You RaviN"
+    let result7 = str1.search("Are")
+    document.write(result7 + "<br>")
+    /*************************************************************************************************/
+    // Methiod name : match
+    // used for : used to find the word is present ort not 
+    let str8 = "How Are You RaviN"
+    let result8 = str8.match('you')
+    document.write(result8 + "<br>")
+    let result08 = str8.match('You')
+    document.write(result08 + "<br>")
+    /*************************************************************************************************/
+    // Methiod name : i and g in regex
+    // Used For : in regex we also use i and g ,i= case sensitive  ,g = global scope
+
+    let str = "hello How are you hello"
+
+    let replace = str.replace(/Hello/, "hai");
+    document.write(replace + "<br>");     //hello How are you hello
+
+    let replace1 = str.replace(/Hello/i, "hai");
+    document.write(replace1 + "<br>");   //hai How are you hello
+
+    let replace2 = str.replace(/Hello/g, "hai");
+    document.write(replace2 + "<br>");     //hello How are you hello
+
+    /*************************************************************************************************/
+    // type concersion   implicit and explicit type conversion
+
+    // implicit type conversion = which automatically converts value to corrrect datatype
+    // explicit type conversion  = by using external function or key words we need to to convert numvers or object 
+
+    // implicite 
+    document.write(10 + "10" + "<br>")
+    document.write(10 * "10" + "<br>")
+    document.write(10 - "10" + "<br>")
+    document.write(10 / "10" + "<br>")
+    document.write(10 % "10" + "<br>")
+
+
+    // explicite type conversion 
+
+    let num = 10;
+    let result = num.toString();
+    document.write("before  conversion  it is a " + typeof (num) + "<br>");
+    document.write("after conversion its is a  " + typeof (result) + "<br>");
+    document.write(result + "<br>");
+
+
+
+    let num1 = 10;
+    let result01 = String(num1); // or num.toString()
+    document.write(typeof (result01) + "<br>"); // Outputs the type of result
+    document.write(result01 + "<br>"); // Outputs the converted result
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

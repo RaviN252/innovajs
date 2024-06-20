@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Array Methods 21 methods</h1>
+</body>
+<script>
+    // Traversing an aray by usinfg for loop
+    let array = [1, 2, 3, 5, 8, 34, 7, 89, 64, 42]
+    document.write(array + "<br>");
+
+
+    /*************************************************************************************************/
+    // Methiod name :  length
+    // used for :  to find the length of an array
+
+    let arr1 = [1, 3, 5, , 7, 8, 9, 6, 5, 23, 34, 56]
+    let result1 = arr1.length;
+    document.write(result1 + "<br>")
+    /*************************************************************************************************/
+    // Methiod name : map();
+    // used for :is used to apply or merge one application or value with each and every element of that array
+
+    let arr2 = [1, 3, 5, , 7, 8, 9, 6, 5, 23, 34, 56]
+    let result2 = arr2.map(e => e + 100)
+    document.write(result2 + "<br>");
+    /*************************************************************************************************/
+    // Methiod name : push 
+    // used for : to insert an element at the end 
+
+    let arr3 = [10, 355, 632, 40, 50, 93, 99, 1000, 202]
+    let result3 = arr3.push(900)
+    document.write(arr3 + "<br>")
+    /*************************************************************************************************/
+    // Methiod name : pop ()
+    // used for : used to remove  the last element 
+
+    let arr4 = [10, 355, 632, 40, 50, 93, 99, 1000, 202]
+    let result4 = arr4.pop()
+    document.write(arr4 + "<br>")
+    /*************************************************************************************************/
+    // Methiod name : shift
+    // used for : use to remove the first element
+
+    let arr5 = [10, 355, 632, 40, 50, 93, 99, 1000, 202]
+    let result5 = arr5.shift()
+    document.write(arr5 + "<br>")
+    // /*************************************************************************************************/
+    // Methiod name : un shift
+    // used for : used for add a  element at the first elememt
+
+    let arr6 = [10, 355, 632, 40, 50, 93, 99, 1000, 202]
+    let result6 = arr6.unshift(900)
+    document.write(arr6 + "<br>")
+    // /*************************************************************************************************/
+    // Methiod name : find 
+    // used for : it returns the first element of tha array which satisfies the condition 
+
+    let arr7 = [10, 355, 632, 40, 50, 93, 99, 1000, 202]
+    let result7 = arr7.find(e => e > 300)
+    document.write(result7)
+    // /*************************************************************************************************/
+    // Methiod name : filter
+    // used for :it returns all the elements which satisfies the condition 
+
+    let arr8 = [10, 632, 40, 50, 93, 999, 1000, 202]
+    let result8 = arr8.filter(e => e > 300)
+    document.write(result8 + "<br>")
+    // /*************************************************************************************************/
+    // Methiod name : index of 
+    // used for : it is uded to get the index of a partcular value 
+
+    let arr9 = [10, 355, 632, 40, 50, 93, 99, 1000, 202]
+    let result9 = arr9.indexOf(99)
+    document.write(result9 + "<br>")
+    // /*************************************************************************************************/
+    // Methiod name : includes
+    // used for : used to check wether the data is in the array or not
+
+    let arr10 = [10, 355, 632, 40, 50, 93, 99, 1000, 202]
+    let result10 = arr10.includes(900)
+    document.write(result10 + "<br>")
+    // /*************************************************************************************************/
+    // Methiod name : sort 
+    // // used for : used to sort the numbers 
+    let arr11 = [10, 355, 632, 40, 50, 93, 99, 1000, 202]
+    let result11 = arr11.sort((a, b) => a - b)
+    document.write(arr11 + "<br>")
+    // /*************************************************************************************************/
+    // Methiod name : reverse 
+    // used for : used to reversse an array elelmenmt 
+    let arr12 = [10, 355, 632, 40, 50, 93, 99, 1000, 202]
+    let result12 = arr12.reverse()
+    document.write(result12 + "<br>")
+
+
+    // we can reverse an number without using the methods 
+
+    let arr = [10, 355, 632, 40, 50, 93, 99, 1000, 202]
+
+    for (let i = arr.length - 1; i >= 0; i--) {
+        document.write(arr[i] + " ");
+    }
+    document.write("<br>");
+
+    /// sort and reverse
+    let sort = [0, 9, 3, 5, 6]
+    let result = sort.sort().reverse();
+    document.write(result + "<br>")
+    // /*************************************************************************************************/
+    // Methiod name : some 
+    // used for :  similar to or operator  is  any one  of the condition satisfies it will return true 
+    let arr13 = ["str1", "str2", "str3", "str4", "str5", "str6", "str7"]
+    let result13 = arr13.some(e => e == "str1")
+    document.write(result13 + "<br>")
+    // /*************************************************************************************************/
+    // Methiod name : .every
+    // used for :  opp to or operator here all operator should satisft the condition else return false 
+    let arr14 = ["str1", "str2", "str3", "str4", "str5", "str6", "str7"]
+    let result14 = arr14.every(e => e == "str1")
+    document.write(result14 + "<br>")
+    // /*************************************************************************************************/
+    // Methiod name : find indwex of 
+    // used for : it is used to return the value of the element which is satisfies the condition and first 
+    let arr15 = [10, 355, 632, 40, 50, 93, 99, 1000, 202]
+    let result15 = arr15.findIndex(e => e > 30 && e < 50)
+    document.write(result15 + "<br>")
+    // /*************************************************************************************************/
+    // Methiod name : join
+    // used for : used to check wether the
+    let arr16 = [10, 355, 632, 40, 50, 93, 99, 1000, 202]
+    let result16 = arr16.join('&')
+    document.write(result16 + "<br>")
+    // /*************************************************************************************************/
+    // Methiod name : at ()
+    // used for : used to  bring the element of an array by using index poosition
+    let arr17 = [10, 355, 632, 40, 50, 93, 99, 1000, 202]
+    let result17 = arr17.at(2)
+    document.write(result17 + "<br>")
+    // /*************************************************************************************************/
+    // Methiod name : concat
+    // used for : used to merge two array
+    let arrcon = ["hello how  are you "]
+    let arr18 = [10, 355, 632, 40, 50, 93, 99, 1000, 202]
+    let result18 = arr18.concat(arrcon)
+    document.write(result18 + "<br>")
+    // /*************************************************************************************************/
+    // Methiod name : for each 
+    // used for : used to loop through the array 
+    let arr19 = [10, 355, 632, 40, 50, 93, 99, 1000, 202]
+    let result19 = arr19.forEach(e => document.write(e));
+    document.write("<br>")
+
+    // /*************************************************************************************************/
+    // Methiod name :  reduce
+    // used for : to reduce the index position  and it will reduce the element in the single value
+    let arr20 = [10, 355, 632, 40, 50, 93, 99, 1000, 202]
+    let result20 = arr.reduce((a, b) => a + b)
+    document.write(result20 + "<br>")
+    // /*************************************************************************************************/
+    // Methiod name : slice
+    // used for : used to clone an array 
+    let arr21 = [10, 355, 632, 40, 50, 93, 99, 1000, 202]
+    let result21 = arr21.slice(1, 5)
+    document.write(result21 + "<br>")
+    let result02 = arr21.slice(-5, -1)
+    document.write(result02 + "<br>")
+    // /*************************************************************************************************/
+    // Methiod name : splice  
+    // used for : used to to delete insert and replace
+    let arr22 = [10, 355, 632, 40, 50, 93, 99, 1000, 202]
+    document.write(" before Splice " + arr22 + "<br>")
+    let result22 = arr22.splice(2, 1)
+    document.write(arr22 + "<br>")
+
+    let result01 = arr22.splice(4, 0, 100)
+    document.write(arr22 + "<br>")
+
+    let result002 = arr22.splice(0, 1, 120)
+    document.write(arr22 + "<br>")
+
+
+
+    /*************************************************************************************************/
+
+    // assignments
+
+    // ascendig order [ 12, 45, 67,86,34,9, 45,76,12]
+
+    // let array = [12, 45, 67, 86, 34, 9, 45, 76, 12];
+
+    // for (let i = 0; i < array.length; i++) {
+    //     for (let j = i + 1; j < array.length; j++) {
+    //         if (array[j] > array[i]) {
+    //             let temp = array[i];
+    //             array[i] = array[j];
+    //             array[j] = temp;
+    //         }
+    //     }
+    // }
+
+    // document.write(array + "<br>");
+    /*************************************************************************************************/
+
+    // decnding order [ 12, 45, 67,86,34,9, 45,76,12]
+
+    // let arr = [12, 45, 67, 86, 34, 9, 45, 76, 12];
+
+    // for (let i = 0; i < arr.length; i++) {
+    //     for (let j = i + 1; j < arr.length; j++) {
+    //         if (arr[i] > arr[j]) {
+    //             let temp = arr[j];
+    //             arr[j] = arr[i];
+    //             arr[i] = temp;
+    //         }
+    //     }
+    // }
+
+    // document.write(arr);
+
+    /*************************************************************************************************/
+    // 1 ) filter
+    // write the program to get above 20000
+
+    // let salary = [1000, 80000, 8000, 25000, 30000, 10000];
+    // let result = salary.filter(e => e > 20000)
+    // document.write(result);
+
+
+    //  2 ) 
+    /*
+    condition 1 :  i need employee but the age limit is 20 t0 30
+    condition 2 :   filter the employees who are above 30
+    condition 1 :  filter the employee for highest position so the age limit is 40 to 50 */
+    let age = [23, 18, 12, 56, 13, 45, 17, 25, 30, 70, 26, 21, 24, 42, 60, 48, 45]
+
+    let agelimit = age.filter(e => e > 20 && e < 30);
+    document.write(agelimit + "<br>");
+
+    let ageabove = age.filter(e => e > 50);
+    document.write(ageabove + "<br>");
+
+    let agepos = age.filter(e => e > 40 && e < 50);
+    document.write(agepos + "<br>");
+
+
+    //3)
+    /*
+    condition1: filter the prodcuct below 100
+    condition2: filter the product  500 to 10000
+    condition3: filter the product above 1000
+    */
+    let dressamount = [100, 85, 300, 200, 500, 1000, 600, 800, 400, 5000, 650]
+    let dbelow = dressamount.filter(e => e < 100)
+    document.write(dbelow + "<br>")
+
+    let dbetween = dressamount.filter(e => e > 500 && e < 1000)
+    document.write(dbetween + "<br>")
+
+    let dabove = dressamount.filter(e => e > 1000)
+    document.write(dabove + "<br>")
+
+    /*************************************************************************************************/
+    //1 write a java sctipt function to clone an aray   
+    // we can use slice method 
+
+    let arraya = [12, 43, 23, 2345, "Ravi N", 56]
+    let arrayclone = arraya.slice()
+    document.write(arrayclone + "<br>")
+
+    /*************************************************************************************************/
+    //2 write a java sctipt program to join all elements of the following array in to a string
+    /*
+    Exceptes out put
+    Red,Green,White,Black
+    Red+Green+White+Black
+    */
+    // we can use join method  
+    let arrayb = ["Red", "Green", "White", "Black"]
+    let arrayop1 = arrayb.join()
+    document.write(arrayop1 + "<br>")
+    let arrayop2 = arrayb.join("+")
+    document.write(arrayop2 + "<br>")
+
+
+    /*************************************************************************************************/
+    /*3  Write  a JavaScript Program that accepts a number as input and insert dashes (-) betweem each even nummber
+    for example if you accept 025468 the out put should be 0-254-6-8
+
+    */
+
+    /*************************************************************************************************/
+    /*4  write a java script program to sort the iteam of an array
+    sample array : var arr1 = [ -3,8,7,6,5,-4,3,2,1];
+    sample output : 
+    */
+    let arrayd = [-3, 8, 7, 6, 5, -4, 3, 2, 1];
+    // let arraysort = arrayd.sort()
+    // document.write(arraysort)  // -3,-4,1,2,3,5,6,7,8   it is not the exact output required
+    for (let i = 0; i < arrayd.length; i++) {
+        for (let j = i + 1; j < arrayd.length; j++) {
+            if (arrayd[i] > arrayd[j]) {
+                let temp = arrayd[j];
+                arrayd[j] = arrayd[i]
+                arrayd[i] = temp;
+            }
+        }
+    }
+    document.write(arrayd + "<br>");
+    /*************************************************************************************************/
+    /*5  write a javs script program to find the most frequent iteam in an array
+    Sample arry : var arr1 = [3,4,'a',5,6,,'a'7,8,9,'a',10,'a',12,'a']
+    Sample Output: a (5 times )
+    */
+    /*************************************************************************************************/
+    /*6*/
+    /*************************************************************************************************/
+    /*7*/
+
+
+
+</script>
+
+</html>

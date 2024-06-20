@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3> Array of Objects , Objects of Objects , Objects of array , objects of function </h3>
+</body>
+<script>
+    // Array of objects   one array in side many objects 
+    let students = [
+        {
+            name: 'Ravi N',
+            id: 1,
+            city: "Banglore"
+        },
+        {
+            name: 'Pavi M',
+            id: 2,
+            city: "Manglore"
+        },
+        {
+            name: 'Raki ',
+            id: 3,
+            city: "Manglore"
+        },
+        {
+            name: 'Ram ',
+            id: 4,
+            city: "Banglore"
+        },
+        {
+            name: 'Sham',
+            id: 5,
+            city: "Banglore"
+        }
+    ]
+    console.log(students)
+    let stdresult = students.filter(e => e.city == "Banglore")
+    console.log(stdresult);
+
+
+    /*************************************************************************************************/
+    // objects of objects
+    // we can create object within objects 
+    let person = {
+        name: "Ravi N",
+        Phno: 9686595916,
+        emailid: "ravin7n10@gmail.com",
+        address: {
+            houseno: 72,
+            streeno: "3rd cross",
+            layout: "shamanna layout",
+        }
+    };
+    console.log(person);
+    console.log(person.name);
+    console.log(person.address.layout);
+    /*************************************************************************************************/
+    // object of array
+
+    let bike = {
+        name: "R15",
+        price: "12000000$",
+        releasedate: [26, 27, 28, 29, 30]
+    }
+    // document.write(bike) // its cannot access in document .write 
+    console.log(bike)
+    console.log(bike.releasedate),
+        console.log(bike.releasedate[2])
+
+
+    /*************************************************************************************************/
+    // object of function
+    // we can create a function within the object
+    // this key word :
+    // it will be denoting the current variable
+    // it should be used inside the objects 
+
+
+    let user = {
+        firstname: "Ravi",
+        lastname: "N",
+        phno: 9686595916,
+        fullname: function () {
+            console.log(this.firstname + " " + this.lastname)
+        }
+    }
+    user.fullname()
+    console.log(user.phno)
+
+
+
+
+
+
+
+
+</script>
+
+</html>
