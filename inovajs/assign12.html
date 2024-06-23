@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>OOPS in JavaScript</h1>
+</body>
+<script>
+    // object 
+    class student {
+        constructor() {
+            this.stddetails = {
+                name: "Ravi N",
+                rollno: 1234,
+                sclname: "school"
+            }
+        }
+    }
+    let obj = new student();
+    console.log(obj.stddetails)
+    console.log(obj.stddetails.name)
+    console.log(obj.stddetails.rollno)
+
+    /*Constructor are used to initialize the values
+    * its a special type of class 
+    * its is a automtically called when the object is created for that class  
+    *  */
+
+
+
+    /**********************************************************************************/
+    /*inheritance in javascript
+    * inheritance is used to in herit parent class to child class that we can access alla data from paret to child class 
+    * parent to sub 
+    * super to sub class 
+    * base to derived class */
+
+    class parent {
+        constructor() {
+            this.num1 = 10;
+        }
+    }
+    class child extends parent {
+
+        constructor() {
+            super();
+            this.num2 = 20;
+        }
+    }
+    let obj1 = new child();
+    console.log(obj1.num1);
+    console.log(obj1.num2)
+
+    // here we need to create a object for child class no needd to create for parent class 
+
+    /**********************************************************************************/
+    /* Methods
+    */
+    class parents {
+        constructor() {
+            this.name = "Ravi N"
+        }
+        display() {
+            console.log("Methods in javaScript")  // methods 
+        }
+    }
+    class childs extends parents {
+        constructor() {
+            super();
+            this.num = 12
+        }
+        show() {
+            console.log("methods in javascript")
+        }
+    }
+    let object = new childs();
+    object.display()
+    object.show()
+    /*************************************** SYNC TO ASYNC *******************************************/
+    // call back function
+
+    /*
+    * A calla back function that passes as a argumnet to another function and is called after the main function has finished its execution
+    * The Main Function is called with a call back function as its argument and when the main function is finishes it calls the call back function to provide a result
+    * call back  are used to  handle the asynchronous opertion is nos  blocking asynchronos manner
+    *  non blocking asynchronous the opertaion does not lock the exception of rest of the program insted the program will start its contionous execution */
+    // function main(func) {
+    //     func();
+    //     console.log("Main Function")
+    // } main(sub)
+    // function sub() {
+
+    //     console.log("Sub Function")
+
+    // }
+    // sub();
+    /* example 2*/
+    // function main(func) {
+    //     console.log("Main Function")
+    //     let num1 = 10;
+    //     let num2 = 10;
+    //     let sum = num1 + num2;
+    //     func(sum);
+
+    // } main(sub);
+    // function sub(add) {
+    //     console.log("Sub Fuction")
+    //     console.log(add);
+    // } sub();
+    function main(func) {
+        console.log("Main Function");
+        let num1 = 10;
+        let num2 = 10;
+        let sum = num1 + num2;
+        // Call the passed function (sub) with the sum
+        func(sum);
+    }
+
+    // Call the main function and pass the sub function as an argument
+    main(sub);
+
+    function sub(add) {
+        console.log("Sub Function");
+        // Log the value passed from the main function
+        console.log(add);
+    }
+
+    // Directly calling sub without an argument will result in undefined being logged
+    sub();
+
+    /**********************************************************************************/
+    /**/
+</script>
+
+</html>

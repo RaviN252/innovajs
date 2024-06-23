@@ -109,7 +109,7 @@
     let unum = obj.num;
     console.log(unum) // as its taking a lot of lines
 
-    // we should use oblect literals 
+    // we should use oblect destructuring 
     let { name: usname, num: usnum, email: usemail } = obj
     console.log(usname, usemail, usnum) // or else we can also use in diffrent format
 
@@ -117,28 +117,74 @@
     console.log(name, num, email)
 
     /**********************************************************************************/
-    /* Concept Name:
+    /* Concept Name:Template literals
+    Used For : Template literals 
+    */
+
+    let numb = 10;
+    let cube = 10 * 10 * 10;
+
+    document.write("The Number is " + num + " The Cube of the " + num + " is " + cube + "<br>");
+
+    document.write(`The Number is ${num} The cCbe of the ${num} is ${cube}`)
+    /**********************************************************************************/
+    /* Concept Name: scope {}
+    Used For :local scope and global scope
+    */
+
+    // function fun() {
+    //     let a = (0)
+    //     if (a == b) {
+    //         console.log(a);
+    //         let b = 20;
+    //     }
+    //     console.log(b)
+    // } func();
+
+    /***********************************************************************************/
+    /* Concept Name: arrow functionn
     Used For :*/
     /**********************************************************************************/
-    /* Concept Name:
+    /* Concept Name: IIFE
     Used For :*/
     /**********************************************************************************/
-    /* Concept Name:
+    /* Concept Name: Hosting
+    Used For : Hosting is applicable only for normal function it is not accaplabel to arrow function or any orther function*/
+
+    func();
+    function func() {
+        console.log(" Hosting")
+    }
+
+
+    // funct();
+    // let funtc = () => {
+    //     console.log("Hosting 2")     // error or not defined   
+
+    // };
+
+    /**********************************************************************************/
+    /* Concept Name:  clouse
+    Used For : a clouser is a function is a feature like function inside another function*/
+
+    function outside() {
+        let num1 = 20;
+        let num2 = 30;
+        let add = num1 + num2;
+
+        function inside() {
+            console.log("Addition of num1 and num2 is" + add)
+
+        }
+        inside();
+
+    }
+    outside();
+    /**********************************************************************************/
+    /* Concept Name: 12 return
     Used For :*/
     /**********************************************************************************/
-    /* Concept Name:
-    Used For :*/
-    /**********************************************************************************/
-    /* Concept Name:
-    Used For :*/
-    /**********************************************************************************/
-    /* Concept Name:
-    Used For :*/
-    /**********************************************************************************/
-    /* Concept Name:
-    Used For :*/
-    /**********************************************************************************/
-    /* Concept Name:
+    /* Concept Name: this key word
     Used For :*/
     /**********************************************************************************/
     /* Concept Name:
