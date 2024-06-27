@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h1>OOPS in JavaScript</h1>
+    <h1>OOPS in JavaScript ES6</h1>
 </body>
 <script>
     // object 
@@ -129,12 +129,92 @@
         // Log the value passed from the main function
         console.log(add);
     }
-
     // Directly calling sub without an argument will result in undefined being logged
     sub();
 
-    /**********************************************************************************/
+
+    // another example for call back example  another way same work but differnt way of writing
     /**/
+    function func(sub) {
+        sub();
+        console.log("Main Function called ")
+
+
+    } func(function () {
+        console.log("subfunction")
+    })
+
+    /**********************************************************************************/
+    /*Es6 method name :  Promises in javascript
+
+    if the code has the call back again it is defined a call back hell 
+    recursive structure of a  call back 
+
+    to solcec this kind of issues we are using the promises there are three possible states
+    
+    * fulfilled sates : when the operation completely siccessfull
+    * rejected : when the operstion is failed 
+    * pending : it os a inital stage it is neithere rejected nor fulfilled
+    * then(): is used to response and catch()is used for rejected  
+    */
+
+    // let obj2 = new Promise(function (resolve, reject) {
+    //     let num = 7;
+    //     if (num % 2 == 0) {
+    //         resolve();
+    //     } else {
+    //         reject();
+    //     }
+    // });
+    // obj2.then(result => console.log("Numeber is dicisibele by 2"))
+    //     .catch(reject => console.log("Numeber is not  dicisibele by 2"));
+
+
+    /**********************************************************************************/
+    /*Es6 method name : asynv & await
+
+    */
+    console.log("async function started");
+    let func1 = async () => {
+        let num = await 10;
+        console.log(num)
+    }
+    func1();
+    console.log("async Function Completed");
+
+    /**********************************************************************************/
+    /*Es6 method name : set time out
+    The function is used onky once after the particuler tiem we declared
+    */
+    // setTimeout(() => {
+    //     console.log("Set Time Out ")
+    // }, 3000)
+
+    // we can also write in seprate function and call 
+
+    // function handler() {
+    //     console.log("Set Time Out Using Normal Function")
+    // }
+    // setTimeout(handler, 4000)
+
+    /**********************************************************************************/
+    /*Es6 method name : set interval
+    It is Used to print the code of the function using caertain timeinterval or after the delay continious 
+    */
+    // setInterval(() => {
+    //     console.log("SetInterval Function")
+
+    // }, 1000);
+    // 
+
+    //SetIntervalTime  
+    let timer = () => {
+        console.log("Timer Set Interval Function")
+    }
+    setInterval(timer, 3000)
+
+
+
 </script>
 
 </html>

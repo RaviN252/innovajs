@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Math Functions </h1>
+    <button onclick="otp()">OTP</button><br>
+    <br>
+
+
+    <button onclick="captcha()">Captcha</button>
+
+</body>
+<script>
+
+    /* Math.floor() : it helps to roun of the  number to the nearest integer or number
+    */
+    // let num = 25.45;
+    // console.log(Math.floor(num))
+    /**********************************************************************************/
+    /* Math.round() : it helps to roun of the  number to the nearest integer or number
+    */
+    // console.log(Math.round(num))
+    /**********************************************************************************/
+    /*  Math.random: th random number will be getting by the setted limlis match.random(1)*
+    * this will return  floating values
+    * to get rounded values you can use round or floor()method before random method
+    */
+    //    setInterval(()=>{
+    //     let num = Math.floor(Math.random(1)*100)
+    //     console.log(num)
+    //    }, 2000)
+
+    /**********************************************************************************/
+    /*Math.max();
+    used to find maximun number of the givem element
+    */
+    // console.log(Math.max(78, 98, 100, 250, 300, 12, 34))
+
+    /**********************************************************************************/
+    /* Math.min();
+    */
+    //console.log(Math.min(78, 98, 100, 250, 300, 12, 34))
+    /**********************************************************************************/
+    /* Math.sqrt(); it is used to give the sqrt of the number
+    */
+    // let num1 = 25;
+    // console.log(Math.sqrt(num1))
+    //console.log(Math.(num))
+    /**********************************************************************************/
+    /* Math.pow(x,y)
+    */
+    // let x = 25;
+    // let y = 2
+    // console.log(Math.pow(x, y))
+
+    /**********************************************************************************/
+    // assignment otp generation
+    function otp() {
+        let num = Math.floor(Math.random(1) * 10000);
+        alert(num);
+
+    };
+    //catptcha
+    /****************************/
+
+    function captcha() {
+        let char = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghigklmnopqrstuvwxyz0123456789';
+        let cap = '';
+        for (let i = 0; i <= 5; i++) {
+            let randomIndex = Math.floor(Math.random() * char.length);
+            cap += char[randomIndex];
+        }
+        alert(cap);
+    }
+
+
+</script>
+
+</html>

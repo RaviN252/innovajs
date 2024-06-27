@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Dom Document object model </h1>
+
+
+    <!--By id -->
+    <h1 id="head"></h1>
+
+    <!--By class name -->
+    <h1 class="header">----By Class name-----</h1>
+    <h3 class="header">----By Class name-----</h3>
+    <p class="header">----By Class name-----</p>
+    <!--by Tag Name -->
+
+    <h2>-----By Tag----</h2>
+    <h2>-----By Tag----</h2>
+    <h2>-----By Tag----</h2>
+    <h2>-----By Tag----</h2>
+    <!--By Query Selector -->
+    <!--<h4>-------By Query Selector-------</h4>
+    <h5 id="Qry">--------By Query Selector-------</h5>
+    <h6 class="QryCls">-------By Query Selector-------</h6>-->
+    <!--By Query selectors All -->
+    <h4>-------By Query Selector-------</h4>
+    <h4>-------By Query Selector-------</h4>
+    <h4>-------By Query Selector-------</h4>
+    <h5 id="Qry">--------By Query Selector-------</h5>
+    <h5 id="Qry">--------By Query Selector-------</h5>
+    <h5 id="Qry">--------By Query Selector-------</h5>
+    <h6 class="QryCls">-------By Query Selector-------</h6>
+    <h6 class="QryCls">-------By Query Selector-------</h6>
+    <h6 class="QryCls">-------By Query Selector-------</h6>
+    <h6 class="QryCls">-------By Query Selector-------</h6>
+    <h6 class="QryCls">-------By Query Selector-------</h6>
+    <!--By id -->
+    <!--By id -->
+    <!--By id -->
+
+
+
+</body>
+<script>
+
+    /*DOM stands for document object model
+    *Dom represents an html document as an tree of nodes 
+    * the dom provides function is logic that allows to create to remove and modify the 
+    * document html element effictevely
+     
+    
+    Three type of dom
+    1) xml dom,
+    2) core dom,
+    3) html dom
+
+    we are using 
+    Propertyand method 
+    property : get and set change
+    Methods: actions (add , delete)
+    events: action triggers point
+    */
+
+    /*******************************************************************************************/
+    /* Selecting Elements
+    by id */
+    document.getElementById("head").innerHTML = "Selecting Elements by ID"
+    /*******************************************************************************************/
+    /* by bclass name  */
+    // if u want to change only one class element 
+    let classarr = document.getElementsByClassName("header");
+    classarr[1].innerHTML = "changed by class Name"
+
+    // if u want to change all the elements of class name use for loop through iterate 
+    // for (i of classarr) {
+    //     i.innerHTML = "class using loop to chnage all class "
+    // }
+    /*******************************************************************************************/
+    /* By tag Name*/
+    let tagarr = document.getElementsByTagName("h2");
+    tagarr[1].innerHTML = "Changed by Tag array"
+    // // if u want to change all the tag use loop concept
+
+    // for (i of tagarr) {
+    //     i.innerHTML = "Changed By Tag Name"
+    // }
+
+    /*******************************************************************************************/
+    /*Query selector
+    used to select any of the data class  or id or even tag */
+
+    // let para = document.querySelector("h4")
+    // para.innerHTML = "Changed by Query Selector"
+
+    // para = document.querySelector("#Qry")
+    // para.innerHTML = "Changed by Query Selector"
+
+    // para = document.querySelector(".QryCls")
+    // para.innerHTML = "Changed by Query Selector"
+
+
+
+    /*******************************************************************************************/
+    /*  */
+    let para = document.querySelectorAll("h4")
+    para[1].innerHTML = "Changed by Query Selector"
+
+    para = document.querySelectorAll("#Qry")
+    para[2].innerHTML = "Changed by Query Selector"
+
+    para = document.querySelectorAll(".QryCls")
+    para[3].innerHTML = "Changed by Query Selector"
+    /*******************************************************************************************/
+    /*  */
+</script>
+
+</html>

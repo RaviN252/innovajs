@@ -126,7 +126,7 @@
     let result14 = arr14.every(e => e == "str1")
     document.write(result14 + "<br>")
     // /*************************************************************************************************/
-    // Methiod name : find indwex of 
+    // Methiod name : find index of 
     // used for : it is used to return the value of the element which is satisfies the condition and first 
     let arr15 = [10, 355, 632, 40, 50, 93, 99, 1000, 202]
     let result15 = arr15.findIndex(e => e > 30 && e < 50)
@@ -189,9 +189,9 @@
 
     /*************************************************************************************************/
 
-    // assignments
+    //assignments
 
-    // ascendig order [ 12, 45, 67,86,34,9, 45,76,12]
+    // ascendig order[12, 45, 67, 86, 34, 9, 45, 76, 12]
 
     // let array = [12, 45, 67, 86, 34, 9, 45, 76, 12];
 
@@ -293,20 +293,20 @@
     /*3  Write  a JavaScript Program that accepts a number as input and insert dashes (-) betweem each even nummber
     for example if you accept 025468 the out put should be 0-2 5-4-6-8
     */
-    let num = parseInt(prompt("Enter A Number"));
-    let str = num.toString();
+    let num = prompt("Enter A Number");
+
     console.log(num);
-    let arraysplit = str.split("");
+    let arraysplit = num.split("");
     console.log(arraysplit);
 
     for (let i = 0; i < arraysplit.length; i++) {
-        if (arraysplit[i] % 2 == 0) {
-            console.log("- " + arraysplit[i]);
+        if (arraysplit[i] % 2 == 0 && arraysplit[i + 1] % 2 == 0) {
+            arraysplit.splice(i + 1, 0, "-")
         } else {
             console.log(arraysplit[i]);
         }
     }
-
+    console.log(arraysplit.join(''));
     //13246478424
 
     /*************************************************************************************************/
@@ -438,6 +438,246 @@
     // }
 
 
+    /*************************************************************************************************/
+    // // 9)"welcome to innovaskill"
+    // // "lliksavaonni ot emoclew"
+    // // * Sfirst we need to convery it to an array with space and 
+    // // * then we can reverse it and then  
+    // //  and we can join the reversed 
+    // let str = "welcome to innovaskill"
+    // let arry = str.split('')
+    // console.log(arry)
+
+    // let rev = arry.reverse()
+    // console.log(rev)
+
+    // let str1 = rev.join('')
+    // console.log(str1)
+
+
+    /*************************************************************************************************/
+    // 10) Get a string from user and find how many vowels are there
+    let word = prompt("Enter a word");
+    // console.log(word)
+    let vow = word.split('')
+    // console.log(vow)
+    function vowelcheck() {
+        for (i = 0; i < vow.length; i++) {
+            if (vow[i] == "A" || vow[i] == "E" || vow[i] == "I" || vow[i] == "O" || vow[i] == "U" || vow[i] == "a" || vow[i] == "e" || vow[i] == "i" || vow[i] == "o" || vow[i] == "u") {
+                console.log(vow[i])
+            }
+        }
+    }
+    vowelcheck()
+
+    // // we can also use match function
+
+    // let word = prompt("Enter a word");
+    // console.log(word);
+    // let vow = word.split('');
+    // console.log(vow);
+
+    // function vowelcheck() {
+    //     for (let i = 0; i < vow.length; i++) {
+    //         if (vow[i].match(/[AEIOUaeiou]/)) {
+    //             console.log(vow[i]);
+    //         }
+    //     }
+    // }
+
+    // vowelcheck();
+    /*************************************************************************************************/
+    // 11) get the word from user and check the letters repeatations in it
+
+    // let words = prompt("Enter the Words to find the duplictes in a string ");
+    // console.log(words);
+    // let charCount = {};
+    // function repeated() {
+    //     for (let i = 0; i < words.length; i++) {
+    //         let char = words[i];
+
+    //         if (charCount[char]) {
+    //             charCount[char]++;
+    //         } else {
+    //             charCount[char] = 1;
+    //         }
+    //     }
+    // }
+    // repeated();
+    // for (let i = 0; i < words.length; i++) {
+    //     if (charCount[words[i]] > 1) {
+    //         console.log(`${words[i]} ${charCount[words[i]]}`);
+    //         charCount[words[i]] = 0; //count to 0 to avoid duplicats
+    //     }
+    // }
+
+    /*************************************************************************************************/
+
+    // 12) let array = [-12,-34,5,8.-19,7,6,74,30]
+    // out Put= [8, 74, 7, 6, 5, 30, -34, -19, -12]
+
+    // lets do using return function
+
+
+    // let array = [-12, -34, 5, 8, - 19, 7, 6, 74, 30]
+    // function order() {
+    //     let sortedarray = array.sort()
+    //     console.log(sortedarray)
+    //     let reversedarray = sortedarray.reverse()
+    //     // console.log(reversedarray)
+    //     return reversedarray
+    // }
+    // order()
+    // let data = order();
+    // console.log(data)
+
+
+
+    /*************************************************************************************************/
+    // 13)// let [ 0,2,4,0,12,43,56,78,98,21,34,56,0,40,0]
+    // output :[0, 0, 0, 0, 12, 2, 21, 34, 4, 40, 43, 56, 56, 78, 98]
+    // put the zeros first
+    // method one
+    // if array contains zero remove and arr this to new array
+    // after that we will be having two array one aray with zeros and anothet one with numbers
+    // now we can merge two attays
+    // tried but coudnt sucessed
+    // let array = [0, 2, 4, 0, 12, 43, 56, 78, 98, 21, 34, 56, 0, 40, 0]
+    // // let zerosfirst = {}
+    // function zero() {
+
+    //     for (i = 0; i < array.length; i++) {
+    //         // console.log(array[i])
+
+    //         if (array[i] == 0) {
+    //             console.log(array[i])
+    //             let nums = array.splice(array[i])
+    //         } else {
+
+    //         }
+    //     }
+    // }
+    // zero()
+
+
+    //method two
+    // let array = [0, 2, 4, 0, 12, 43, 56, 78, 98, 21, 34, 56, 0, 40, 0]
+    //     function zero() {
+    //         let sortarray = array.sort()
+    //         console.log(sortarray)
+
+    //     } zero()
+    /*************************************************************************************************/
+    // 14) // Question program to coun repetation of an array elements
+    // let arr = [10,20,30,10,25,20,20,10,30]
+    // repeation of 10 is 3 times
+    // repeation of 20 is 3 times
+    // repeation of 30 is 2 times
+
+    // let arr = [10, 20, 30, 10, 25, 20, 20, 10, 30];
+    // let replication = {};
+
+    // function repeated() {
+    //     for (let i = 0; i < arr.length; i++) {
+    //         let letter = arr[i];
+    //         if (replication[letter]) {
+    //             replication[letter]++;
+    //         } else {
+    //             replication[letter] = 1;
+    //         }
+    //     }
+    // }
+
+    // repeated();
+
+    // for (let i = 0; i < arr.length; i++) {
+    //     let letter = arr[i];
+    //     if (replication[letter] > 1) {
+    //         console.log(`Repliction of  ${letter} is ${replication[letter]} times`);
+    //         replication[letter] = 0;
+    //     }
+    // }
+
+    /*************************************************************************************************/
+    // 15)move all zeros at the end of any array
+    //Test case: input let arr= [1, 0, 3, 0, 4, 5]
+    // out put: [5, 4, 3, 1, 0, 0]
+
+    // let array = [1, 0, 3, 0, 4, 5];
+
+    // function Zeros() {
+    //     let arr = array.sort()
+    //     console.log(arr)
+    //     let dec = arr.reverse()
+    //     // console.log(dec)
+    //     return dec
+    // }
+    // Zeros()
+
+    // let zeroslast = Zeros();
+    // console.log(zeroslast)
+    /*************************************************************************************************/
+    // 16)given an array of integers every elemenet appers twice for one find that single one
+    /*Test case:
+    input:
+    let arr = [10, 90, 20, 90, 38, 10]
+    output: 38 */
+
+
+    // let arr = [10, 90, 20, 90, 38, 10]
+    // let repli = {}
+    // function double() {
+    //     for (i = 0; i < arr.length; i++) {
+    //         let letter = arr[i]
+    //         if (repli[letter]) {
+    //             repli[letter]++
+    //         } else {
+    //             repli[letter] = 1;
+    //         }
+    //     }
+    // }
+    // double();
+    // for (i = 0; i < arr.length; i++) {
+    //     let letter = arr[i]
+    //     if (repli[letter] == 1) {
+    //         console.log(`${letter} ${repli[letter]}`)
+    //         repli[letter] = 0;
+    //     }
+    // }
+
+
+
+    /*************************************************************************************************/
+    /*17)5find the missing numbers in the given array;
+        Test Case;
+    Input
+    arr[] = { 1, 5, 4, 6, 3}
+    output: explanation here the size of the array is 5 so te range wil be[1, 6]
+        The missing number between 1 to 6 is 2 */
+
+    // let arr = [1, 5, 4, 6, 3]
+
+    // function missing() {
+    //     let sort = arr.sort()
+    //     console.log(sort)
+    //     for (i = 1; i <= sort.length + 1; i++) {
+    //         // console.log(arr[i])
+    //         if (sort[i - 1] !== i) {
+    //             console.log(i)
+    //             break;
+    //         }
+
+    //     }
+
+    // } missing()
+    /*************************************************************************************************/
+    // 18)
+    /*************************************************************************************************/
+    // 19)
+    /*************************************************************************************************/
+    // 20)
+    /*************************************************************************************************/
+    // 21)
 
 </script>
 
