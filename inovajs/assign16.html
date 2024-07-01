@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .QGen {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        #btn {
+            width: 120px;
+            height: 40px;
+            border-radius: 30px;
+            background-color: whitesmoke;
+            columns: black;
+            align-items: center;
+            margin-top: 50px;
+            margin-left: 46%;
+
+        }
+
+        .body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <h2 id="quotes" class="QGen">Quotes</h2>
+    <h1 id="author" class="QGen">-Authors</h1>
+    <button onclick="Quotegen()" id="btn">Show Quotes</button>
+</body>
+
+<script>
+
+    let arr = [
+        {
+            quote: "YOU ARE STRONGER THAN YOUR THING",
+            name: "— RAVI N"
+        },
+        {
+            quote: "YOUR TIME IS LIMITED SO DON'T WASTE IT LIVING SOMEONE ELSE'S LIFE ",
+            name: "— STEVE JOBS"
+        },
+        {
+            quote: "SUCCESS IS NEVER ENDING FAILURE IS NOT FINAL ",
+            name: "— GAYATHRI"
+        },
+        {
+            quote: "IF YOU DONT BELIVE YOU ARE THE BEST, THEN YOU WILL NEVER ACHIEVE ALL THAT YOU ARE CAPABLE OF.",
+            name: "— ROCK"
+        },
+        {
+            quote: "NEVER DOUBT YOURSELF",
+            name: "— SUNIL CHHETRI"
+        },
+        {
+            quote: "WITHOUT YOUR INVOLVEMENT , YOU CANT'T SUCCEED. WITH YOUR INVOLVEMET , YOU CANT FAIL.",
+
+            name: "— A. P. J. Abdul Kalam"
+        },
+        {
+            quote: "DON'T BE AFRAID OF BEING DIFFRENT , BE AFRAID OF BEING LIKE EVERYONE ELSE. ",
+            name: "— ROHITH SHARMA"
+        },
+        {
+            quote: "NO ONE EVER ACHIEVEVD  GREATNESS BY PLAYING IT SAFE ",
+            name: "— VALENTINE ROSSI "
+        }
+    ];
+    function Quotegen() {
+        let result = arr.at(Math.floor(Math.random() * arr.length));
+        document.getElementById("quotes").innerHTML = result.quote
+        document.getElementById("author").innerHTML = result.name
+
+
+        let char = 'ABCDEFabcdef0123456789';
+        let col = '#';
+        for (let i = 0; i <= 5; i++) {
+            let randomIndex = Math.floor(Math.random() * char.length);
+            col += (char[randomIndex])
+        }
+        // console.log(col)
+        document.getElementById("body").style.backgroundColor = col
+    }
+    setInterval(Quotegen, 2000)
+</script>
+
+</html>

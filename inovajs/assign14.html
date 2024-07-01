@@ -7,9 +7,13 @@
     <title>Document</title>
 </head>
 
-<body>
+<body id="body">
+
     <h1>Dom Document object model </h1>
 
+
+    <!--Manuplating Elements styles  -->
+    <button onclick="theme()">Theme</button>
 
     <!--By id -->
     <h1 id="head"></h1>
@@ -40,7 +44,12 @@
     <h6 class="QryCls">-------By Query Selector-------</h6>
     <h6 class="QryCls">-------By Query Selector-------</h6>
     <h6 class="QryCls">-------By Query Selector-------</h6>
-    <!--By id -->
+    <!--Manuplating Elements styles  -->
+    <!-- <h1 id="body">Manuplating Elements styles</h1>
+    <p id="body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, iste maiores. Ipsam nihil quia quae
+        ipsum optio
+        repellendus minus veritatis. Veritatis nam, officia nihil sunt perspiciatis magni eius impedit sed.</p> -->
+
     <!--By id -->
     <!--By id -->
 
@@ -117,7 +126,20 @@
     para = document.querySelectorAll(".QryCls")
     para[3].innerHTML = "Changed by Query Selector"
     /*******************************************************************************************/
-    /*  */
+    /*Manuplatig elements styles
+    in this styel method we can apply styel to the html eements 
+    syntax= element.styel.property="value"
+    ==> style's property should be camalCase*/
+    function theme() {
+        if (document.getElementById("body").style.backgroundColor == "white") {
+            document.getElementById("body").style.backgroundColor = "black"
+            document.getElementById("body").style.color = "white"
+        } else {
+            document.getElementById("body").style.backgroundColor = "white"
+            document.getElementById("body").style.color = "black"
+        }
+    }
+
 </script>
 
 </html>

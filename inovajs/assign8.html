@@ -310,7 +310,7 @@
     //13246478424
 
     /*************************************************************************************************/
-    /*4  write a java script program to sort the iteam of an array
+    /*4  write a java script program to sort the iteam of an array bubble sort
     sample array : var arr1 = [ -3,8,7,6,5,-4,3,2,1];
     sample output : 
     */
@@ -441,7 +441,7 @@
     /*************************************************************************************************/
     // // 9)"welcome to innovaskill"
     // // "lliksavaonni ot emoclew"
-    // // * Sfirst we need to convery it to an array with space and 
+    // // * first we need to convery it to an array with space and 
     // // * then we can reverse it and then  
     // //  and we can join the reversed 
     // let str = "welcome to innovaskill"
@@ -479,7 +479,7 @@
 
     // function vowelcheck() {
     //     for (let i = 0; i < vow.length; i++) {
-    //         if (vow[i].match(/[AEIOUaeiou]/)) {
+    //         if (vow[i].match(/[AEIOUaeiou]/i)) {
     //             console.log(vow[i]);
     //         }
     //     }
@@ -645,8 +645,6 @@
     //     }
     // }
 
-
-
     /*************************************************************************************************/
     /*17)5find the missing numbers in the given array;
         Test Case;
@@ -672,12 +670,262 @@
     // } missing()
     /*************************************************************************************************/
     // 18)
+    /*
+    Advanced Questions of JS:
+    4) Search Insert Position
+     Test Cases:
+     Input;
+     let arr=[1,2,5,6] N=5
+     output:2
+     
+     input 
+     let arr={1,2,5,6} N=3
+     output: 2
+     explanation : since 3 is not present in the array but can be inserted at index 2 to make the array sorted.*/
+
+
+
+    //   let arr = [1, 2, 5, 6, 7]
+    //   let num = 3
+
+    //   function findtheval() {
+
+    //     let value = arr.indexOf(num)
+    //     // console.log(value)
+    //     if (num != value) {
+    //       let result = arr.push(num)
+    //       // console.log(arr)
+    //       let sorted = arr.sort((a, b) => a - b)
+    //       // console.log(sorted)
+    //       let value = arr.indexOf(num)
+    //       console.log(value)
+    //     }
+    //   } findtheval()
     /*************************************************************************************************/
-    // 19)
+    // 19) advance javascript Questions
+
+    // ok  3. Write a function that checks if a given string is a palindrome.
+
+    let string = "1234321"
+
+    // function palindrome() {
+    //   console.log(string)
+    //   for (i = 0; i < string.length; i++)
+    //     for (j = string.length - 1; j = 0; j--) {
+    //       console.log(string[j])
+    //       if (string[i] == string[j]) {
+    //         console.log("palindrome")
+    //       }
+    //       else {
+    //         console.log("its not  palindrome ")
+    //       }
+    //     }
+
+    // }
+    // palindrome();
+
+    // let i = 0;
+    // let j = string.length - 1;
+
+    let msg = ' It Is A Palindrome'
+    for (i = 0; i < string.length / 2; i++) {
+        // console.log(string[i])
+        // console.log(string[string.length - 1 - i])
+        if (string[i] != string[string.length - 1 - i]) {
+            msg = "It Is Not A Palindrome"
+        }
+    }
+    console.log(`${string} :${msg}`)
     /*************************************************************************************************/
-    // 20)
+    // 20) Write a function that takes two sorted arrays and merges them into a single sorted array without using any built-in sorting functions.
+
+    // let arr1 = [1, 3, 6, 8, 12, 14];
+    // let arr2 = [2, 4, 5, 6, 18, 21];
+    // let comarry = [];
+
+
+    // function sorted() {
+    //     for (i = 0; i < arr1.length; i++) {
+    //         comarry.push(arr1[i])
+    //     }
+    //     for (j = 0; j < arr2.length; j++) {
+    //         comarry.push(arr2[j])
+    //     }
+    //     console.log(comarry)
+
+    //     for (k = 0; k < comarry.length; k++) {
+    //         for (l = k + 1; l < comarry.length; l++) {
+    //             if (comarry[k] > comarry[l]) {
+    //                 let temp = comarry[l];
+    //                 comarry[l] = comarry[k]
+    //                 comarry[k] = temp;
+    //             }
+
+    //         }
+    //     }
+    //     console.log(comarry)
+    // } sorted()
     /*************************************************************************************************/
-    // 21)
+    // 21) Write a function to reverse a string without using the built-in reverse() method.
+    // let str = "ABCDEFGHI"
+    // let string = []
+    // let joined = ''
+
+    // function reverse() {
+    //     for (i = str.length - 1; i > 0; i--) {
+    //         string.push(str[i])  // pushes an array
+    //     }
+    //     // console.log(string)   //['I', 'H', 'G', 'F', 'E', 'D', 'C', 'B']
+    //     //  Now we will join it
+    //     for (j = 0; j < string.length; j++) {
+    //         joined = joined + string[j]
+    //     }
+    //     console.log(joined)
+    // } reverse()
+    /*************************************************************************************************/
+    // 23) //  Write a JavaScript function that takes a string as input and counts the occurrences of each character in the string. 
+    // The function should return an object where the keys are the characters and the values are the counts of those characters in the string.
+    //  For example,
+    //   "banana" should return { b: 1, a: 3, n: 2 }
+    let str = "bananna"
+    let charCount = {};
+    function count() {
+        for (let i = 0; i < str.length; i++) {
+            let char = str[i];
+            if (charCount[char]) {
+                charCount[char]++;
+            } else {
+                charCount[char] = 1;
+            }
+            // console.log(`${char}: ${charCount[char]}`)
+        }
+        // for (let char in charCount) {
+        //   console.log(`${char}: ${charCount[char]}`)
+        // }
+        let result = "";
+        for (let char in charCount) {
+            result += `${char}:${charCount[char]},  `;
+        }
+        console.log(result)
+    } count()
+    /*************************************************************************************************/
+    // 24) Write a function that sorts an array of strings in alphabetical order.
+    // For Example: ['Apple', 'Orange', 'Banana', 'Mango'] should
+
+    // let arr = ['Apple', 'Orange', 'Banana', 'Mango']
+    // function sorted() {
+    //     let soarray = arr.sort()
+    //     console.log(soarray)
+    // } sorted()
+    /*************************************************************************************************/
+    // 25)Write a JavaScript function that sorts an array of objects based on the values of a specified key. The function should take two arguments:
+    /*An array of objects.
+    A key that exists in each object.
+    The function should return a new array where the objects are sorted in ascending order based on the values associated with the specified key.
+    Test Cases:
+     Input:
+     const people = [
+         { name: 'John', age: 29 },
+         { name: 'Jane', age: 22 },
+         { name: 'Mary', age: 34 },
+         { name: 'Mark', age: 22 }
+     ];
+         Expected output:
+     [
+         { name: 'Jane', age: 22 },
+         { name: 'Mark', age: 22 },
+         { name: 'John', age: 29 },
+         { name: 'Mary', age: 34 }
+     ]
+         */
+
+    let people = [
+        { name: 'John', age: 29 },
+        { name: 'Jane', age: 22 },
+        { name: 'Mary', age: 34 },
+        { name: 'Mark', age: 22 }
+    ];
+
+    function sortedarray() {
+        let sortage = people.sort((a, b) => a.age - b.age);
+        console.log(sortage)
+
+    } sortedarray()
+    /*************************************************************************************************/
+    // 26)Write a function to remove duplicates from an array.
+    let a = [1, 2, 4, 7, 1, 2, 7, 1, 2, 89, 45, 56]
+    // set is a special es6 feature which store only the unique value
+    // let b = new Set(a)
+    // console.log(b)
+    let c = ["hi", "hello", "hlo", "abc", "def", "hi", "hello", "hlo", "abc"]
+    // let d = new Set(c)
+    // console.log(d)
+    function duplicte() {
+        let b = new Set(a)
+        console.log(b)
+        let d = new Set(c)
+        console.log(d)
+
+    } duplicte()
+    /*************************************************************************************************/
+    // 27)
+    /* Write a function that determines if two strings are anagrams of each other  
+     Description:
+      An anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once. Write a JavaScript function that determines if two strings are anagrams of each other. The function should ignore spaces and be case-insensitive. Implement a function to reverse a string without using the built-in reverse() method.
+     Basic Anagrams: "listen" and "silent" should return true.
+     Different Lengths: "apple" and "pale" should return false.
+     Phrases with Spaces: "A gentleman" and "Elegant man" should return true.
+     Different Cases and Spaces: "School master" and "The classroom" should return true.
+     Special Characters: "Hello, World!" and "ld! WoHello,r" should return true.*/
+
+    let str1 = "apple";
+    let str2 = "ppale"
+
+    function anagram() {
+
+        let sortedStr1 = str1.split('').sort().join('');
+        let sortedStr2 = str2.split('').sort().join('');
+
+        if (sortedStr1 === sortedStr2) {
+            console.log(`${str1} and ${str2} are anagrams`);
+        } else {
+            console.log(`${str1} and ${str2} are not anagrams`);
+        }
+    } anagram()
+    /*************************************************************************************************/
+    // 28)  Write a function that finds the second largest number in an array
+
+    // let array = [1, 48, 53, 79, 2, 5, 67, 84, 12, 31, 30, 35]
+
+
+    // function secondlargest() {
+    //     let sortarr = array.sort().reverse()
+    //     console.log(sortarr)
+    //     console.log(sortarr[1])
+
+    // } secondlargest()
+    /*************************************************************************************************/
+    // 29)
+    /* Write a function to find the factorial of a given number.
+    Description:
+    The factorial of a non-negative integer n is the product of all positive integers less than or equal to n. It is denoted as n!.
+    For example,
+    5! (5 factorial) is equal to
+    5×4×3×2×1=120.*/
+
+    // let num = 5
+    // let fact = 1;
+
+    // function factorial() {
+    //     for (let i = 1; i <= num; i++) {
+    //         fact = fact * i
+    //     }
+    //     console.log(fact)
+    // } factorial()
+
+    /*************************************************************************************************/
+
+
 
 </script>
 
