@@ -11,34 +11,134 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <style>
-        
+
     </style>
 </head>
 
-<div class="container">
-    <h1 class="text-center my-3 ">To Do Check List</h1>
-    <button onclick="addItems()" class="bg-info bg-gradient">Add Items</button>
-    <div id="div">
+<body>
 
-        <ul class="">
-            <li id="list"></li>
-
-        </ul>
-    </div>
-</div>
-</body>
-<script>
-    function addItems() {
-        let userdata = prompt("Enter the data")
-        let listelements = document.createElement("li")
-        listelements.innerText = userdata;
-        document.getElementById("list").appendChild(listelements)
-
-    }
+    <body id="body">
+        <!-- <button onclick="addItems()">click to add</button>
+  <ul id="list">
+  </ul> -->
+        <!--********************************************************************************************************************************-->
 
 
+        <!-- add  items  -->
+        <!-- <div class="container">
+        <h1 class="text-center my-3 ">To Do Check List</h1>
+
+        <input type="text" placeholder="Enter The Todo Task ">
+        <button onclick="addItems()" class="bg-info bg-gradient">Add Items</button>
+        <button onclick="removeItem()" class="bg-info bg-gradient">Remove</button>
+        <div id="div">
+
+            <ul class="">
+                <li id="list"></li>
+
+            </ul>
+        </div>
+    </div> -->
+        <!--********************************************************************************************************************************-->
+
+        <!--Manuplating elements-->
+        <!-- <p id="para"></p>
+    <h1 id="para1"></h1> -->
+
+        <!--********************************************************************************************************************************-->
+        <!-- 3 creating elements and append child
+        it is used to create an html elemenet you can us the create element () methods
+        4 ) to attach the newely created element in to the html page u need to use append child method -->
+
+        <!--********************************************************************************************************************************-->
+        <!-- tecxt content -->
+        <!-- <p id="para">Text Content In Paragraph</p> -->
+        <!--********************************************************************************************************************************-->
+
+        <!-- append and prepend -->
+        <p>Lorem ipsum dolor sit.</p>
+
+        <!--********************************************************************************************************************************-->
+        <!-- Value  -->
+        <input type="text" placeholder="Enter Your Name" id="inputfield">
+        <button onclick="handlerclick()">click</button>
 
 
-</script>
+    </body>
+    <script>
+
+
+
+        // function addItems() {
+
+        //   let data = ["Monday", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"]
+
+        //   for (i of data) {
+        //     console.log(i)
+
+        //     let listelements = document.createElement("li")
+        //     listelements.innerText = i;
+        //     document.getElementById("list").appendChild(listelements)
+
+        //   }
+        // }
+        /*******************************************************************************************/
+
+        // add items drrectly from the input on click
+        // function addItems() {
+        //     let userdata = prompt("Enter the data")
+        //     let listelements = document.createElement("li")
+        //     listelements.innerText = userdata;
+        //     document.getElementById("list").appendChild(listelements)
+        // }
+
+        /*******************************************************************************************/
+        // manuplating elements  diffrent between .innerHtml and
+        // document.getElementById("para").innerHTML = "<h1>Welcome to innova skills </h1>"
+        // document.getElementById("para1").innerText = "<h1>Welcome to innova skills </h1>"
+
+        /*******************************************************************************************/
+        //creating and append child()
+        // let para = document.createElement("p")
+        // para.innerHTML = "Pagrapah created bj javaScript "
+        // document.body.appendChild(para)
+
+        /*******************************************************************************************/
+        //text content()
+        // let para = document.getElementById("para")
+        // console.log(para.textContent)
+
+        /*******************************************************************************************/
+        //append and Prepend
+        // let elemenet = document.createElement("h1");
+        // elemenet.innerHTML = "Welcome To Innova Skills"
+        // document.body.append(elemenet)
+        // document.body.prepend(elemenet)
+
+        /*******************************************************************************************/
+        //value used to get user input from inputfields
+        function handlerclick() {
+            let inputdata = document.getElementById("inputfield");
+            let output = inputdata.value;
+            console.log(output)
+        }
+
+
+        /*******************************************************************************************/
+        //remove ELement Child ;
+        // removechild => is used to remove the element of a node (first element) or node element child 
+
+
+        let removefunction = () => {
+            let parent = document.getElementById("parent");
+            parent.removeChild(parent.firstElementChild);
+
+        }
+
+        /*******************************************************************************************/
+
+
+
+    </script>
 
 </html>
