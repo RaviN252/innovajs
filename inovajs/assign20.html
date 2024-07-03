@@ -9,9 +9,22 @@
 
 <body>
 
-    <input type="text" placeholder="Enter Your First Name" id="input">
 
-    <button id="adddata">Add Data</button>
+
+
+    <!-- <table id="table">
+        <tr>
+            <th>Sl No</th>
+            <th>First Name</th>
+
+        </tr>
+    </table> -->
+
+    <!-- ***************************************************************************** -->
+
+    <input type="text" placeholder="Enter Your First Name" id="inputdata">
+
+    <button id="adddata" onclick="AddTotable()">Add Data</button>
 
 
     <table id="table">
@@ -21,13 +34,34 @@
 
         </tr>
     </table>
-
 </body>
 
 <script>
-    let table = document.getElementById("table");
-    let insert
+    // let table = document.getElementById("table");
+    // let insertrows = table.insertRow(-1);
+    // let insertno = insertrows.insertCell();
+    // let insertname = insertrows.insertCell();
+    // insertno.innerHTML = 1;
+    // insertname.innerHTML = "Ravi N";
 
+    /*****************************************************************************/
+    // adding table data from user or in put field 
+
+    let count = 1;
+    function AddTotable() {
+        let inputdata = document.getElementById("inputdata");
+        let tabledata = document.getElementById("table");
+        let addrows = tabledata.insertRow(-1)
+
+        let insertSlno = addrows.insertCell();
+        insertSlno.innerHTML = count;
+        count++;
+
+
+        let insertName = addrows.insertCell();
+        insertName.innerHTML = inputdata.value;
+
+    }
 </script>
 
 </html>
