@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+    <!--Input field getting user data from input field using .value-->
+    <h1>Input field getting user data from input field using .value</h1>
+    <input type="text" placeholder="Enter Your Name" id="inputdata">
+    <button id="btn">Add </button>
+    <br><br><br>
+    <!--************************************************************************************-->
+
+    <!-- onclick , ondbclick onmouseover example -->
+    <h1>onclick , ondbclick onmouseover example</h1>
+    <label for="">Onclick Eevent :</label>
+    <input type="text" placeholder="Enter Your Name" id="inputdata1">
+    <button id="btn1">Add </button> <br><br>
+    <label for="">Ondbclick Eevent :</label>
+    <input type="text" placeholder="Enter Your Name" id="inputdata2">
+    <button id="btn2">Add </button><br><br>`
+    <label for="">Onmouseover Eevent :</label>
+    <input type="text" placeholder="Enter Your Name" id="inputdata3">
+    <button id="btn3">Add </button>
+
+    <br><br><br>
+
+    <!--************************************************************************************-->
+    <!--  change Key press , key up , key Down -->
+    <h1>change Key press , key up , key Down</h1>
+    <h3>Change ,key up , key DownDoes Not Requied Button</h3>
+    <label for="">Change :</label>
+    <input type="text" placeholder="Enter Your Name" id="inputdata4">
+
+    <br><br><br>
+    <h3>Key Up</h3>
+    <label for="">Key Up :</label>
+    <input type="text" placeholder="Enter Your Name" id="inputdata5">
+
+
+    <br><br><br>
+    <h3>Key Down</h3>
+    <label for="">Key Down :</label>
+    <input type="text" placeholder="Enter Your Name" id="inputdata6">
+
+    <br><br><br>
+
+    <!--************************************************************************************-->
+    <!-- Focus Events-->
+    <h1>Focus Events</h1>
+    <label for="">Foucs Events :</label>
+    <input type="text" placeholder="Enter Your Name" id="inputdata7">
+
+
+    <br><br><br>
+    <!--************************************************************************************-->
+    <!-- -->
+    <!--************************************************************************************-->
+    <!-- -->
+
+</body>
+
+<script>
+
+    // // getting userdata from input field 
+
+    // document.getElementById("btn").addEventListener("click", function () {
+    //     let inputfield = document.getElementById("inputdata");
+    //     console.log(inputfield.value)
+    // })
+
+    /************************************************************************************/
+
+    /* mouse events will help you to use the mouse to interact with the page
+    => events of Mouse
+    1)  dbClick = you should click the elements double time
+    2)  clicK = clicking on the button the function will execute
+    3)  Mouse over = if you move around the content the function will be executed
+    */
+
+    // document.getElementById("btn1").addEventListener("click", function () {
+    //     let inputfield = document.getElementById("inputdata1")
+    //     console.log(inputfield.value)
+    // })
+
+    // document.getElementById("btn2").addEventListener("dbclick", function () {
+    //     let inputfield = document.getElementById("inputdata2")
+    //     console.log(inputfield.value)
+    // })
+
+    // document.getElementById("btn3").addEventListener("mouseover", function () {
+    //     let inputfield = document.getElementById("inputdata3")
+    //     console.log(inputfield.value)
+    // })
+
+
+    /************************************************************************************/
+
+    /*  Change Key ,Press Key Up , Key Down */
+
+    // //change
+    // document.getElementById("inputdata4").addEventListener("change", () => {
+    //     let inputfield = document.getElementById("inputdata4")
+    //     console.log(inputfield.value)
+    // })
+
+
+    //key up
+    document.getElementById("inputdata5").addEventListener("keyup", () => {
+        let inputfield = document.getElementById("inputdata5")
+        console.log(inputfield.value)
+
+    })
+
+
+    // key down
+    document.getElementById("inputdata6").addEventListener("keydown", () => {
+        let inputfield = document.getElementById("inputdata6")
+        console.log(inputfield.value)
+    })
+
+
+    /************************************************************************************/
+
+    /* Focus Events
+    The focus events fires when an element losses or receives its Focus*/
+
+    document.getElementById("inputdata7").addEventListener("focus", () => {
+        let input = document.getElementById("inputdata7");
+        input.style.outline = 0;
+        input.style.borderColor = "Blue"
+    })
+</script>
+
+</html>

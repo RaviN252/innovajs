@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+
+<body>
+
+    <input type="text" placeholder="Enter Your Name" id="uname"><br>
+    <p id="err1"></p>
+    <input type="email" placeholder="Enter Your Email" id="uemail"><br>
+    <p id="err2"></p>
+    <input type="text" placeholder="Enter Your Number" id="unumber"><br>
+    <p id="err3"></p>
+    <input type="date" id="udob"><br>
+    <p id="err4"></p>
+    <input type="password" placeholder="Enter Your password" id="upass"><br>
+    <p id="err5"></p>
+    <button id="btn">Submit</button>
+
+</body>
+
+
+<script>
+    document.getElementById("btn").addEventListener("click", function () {
+
+
+        let name = document.getElementById("uname");
+        let email = document.getElementById("uemail");
+        let number = document.getElementById("unumber");
+        let dateofbirth = document.getElementById("udob");
+        let password = document.getElementById("upass");
+
+
+        if (name.value === "") {
+            document.getElementById("err1").innerHTML = "Please Enter Your Name"
+        }
+        if (email.value === "") {
+            document.getElementById("err2").innerHTML = "Please Enter Your Email"
+        }
+        if (number.value === "") {
+            document.getElementById("err3").innerHTML = "Please Enter Your Number"
+        }
+        if (dateofbirth.value === "") {
+            document.getElementById("err4").innerHTML = "Please Enter Your D O B"
+        }
+        if (password.value === "") {
+            document.getElementById("err5").innerHTML = "Please Enter Your Password"
+        }
+
+    })
+
+</script>
+
+</html>
