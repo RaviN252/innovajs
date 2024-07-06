@@ -9,22 +9,24 @@
 
 <body id="body">
     <!--Manipulating Elements-->
-    <!-- <p id="para"></p>
-    <h1 id="heading"></h1> -->
+    <p id="para"></p>
+    <h1 id="heading"></h1>
+    <h2 id="headings"></h2>
 
     <button onclick="addItems()">Add Items</button>
     <ul id="list"></ul>
 </body>
 <script>
     // manipulating an element 
-    // document.getElementById("para").innerHTML = " <h1>Welcome To Innova Skills</h> "
-    // document.getElementById("heading").innerText = " Welcome "
+    document.getElementById("para").innerHTML = " <h1>Welcome To Innova Skills</h> "
+    document.getElementById("heading").innerText = "<h1> Welcome<h1> "
+    document.getElementById("headings").innerText = " Welcome "
 
-    // // Creating And AppendChild
-    // let para = document.createElement("p")
+    // Creating And AppendChild
+    let para = document.createElement("p")
     // console.log(para)
-    // para.innerHTML = "Paragraph Created By JS"
-    // document.body.appendChild(para)
+    para.innerHTML = "Paragraph Created By JS"
+    document.body.appendChild(para)
 
     // 
     function addItems() {

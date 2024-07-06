@@ -38,17 +38,33 @@
         if (name.value === "") {
             document.getElementById("err1").innerHTML = "Please Enter Your Name"
         }
+        else {
+            document.getElementById("err1").innerHTML = ""
+            console.log(name.value)
+        }
         if (email.value === "") {
             document.getElementById("err2").innerHTML = "Please Enter Your Email"
+        }
+        else {
+            document.getElementById("err2").innerHTML = ""
         }
         if (number.value === "") {
             document.getElementById("err3").innerHTML = "Please Enter Your Number"
         }
+        else {
+            document.getElementById("err3").innerHTML = ""
+        }
         if (dateofbirth.value === "") {
             document.getElementById("err4").innerHTML = "Please Enter Your D O B"
         }
+        else {
+            document.getElementById("err4").innerHTML = ""
+        }
         if (password.value === "") {
             document.getElementById("err5").innerHTML = "Please Enter Your Password"
+        }
+        else {
+            document.getElementById("err5").innerHTML = ""
         }
 
     })

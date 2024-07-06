@@ -18,32 +18,21 @@
 <body>
 
     <body id="body">
-        <!-- <button onclick="addItems()">click to add</button>
-  <ul id="list">
-  </ul> -->
+
+        <!--add items from array -->
+        <button onclick="addItems()">click to add</button>
+        <ul id="list">
+        </ul>
         <!--********************************************************************************************************************************-->
-
-
-        <!-- add  items  -->
-        <!-- <div class="container">
-        <h1 class="text-center my-3 ">To Do Check List</h1>
-
-        <input type="text" placeholder="Enter The Todo Task ">
-        <button onclick="addItems()" class="bg-info bg-gradient">Add Items</button>
-        <button onclick="removeItem()" class="bg-info bg-gradient">Remove</button>
-        <div id="div">
-
-            <ul class="">
-                <li id="list"></li>
-
-            </ul>
-        </div>
-    </div> -->
+        <!--add items from prompt-->
+        <button onclick="addItem()">add from prompt</button>
+        <ul id="lists">
+        </ul>
         <!--********************************************************************************************************************************-->
 
         <!--Manuplating elements-->
-        <!-- <p id="para"></p>
-    <h1 id="para1"></h1> -->
+        <p id="para"></p>
+        <h1 id="para1"></h1>
 
         <!--********************************************************************************************************************************-->
         <!-- 3 creating elements and append child
@@ -52,68 +41,62 @@
 
         <!--********************************************************************************************************************************-->
         <!-- tecxt content -->
-        <!-- <p id="para">Text Content In Paragraph</p> -->
+        <p id="paragraph">Text Content In Paragraph</p>
         <!--********************************************************************************************************************************-->
 
         <!-- append and prepend -->
         <p>Lorem ipsum dolor sit.</p>
+        <h1>Append and Prepend</h1>
 
         <!--********************************************************************************************************************************-->
         <!-- Value  -->
-        <input type="text" placeholder="Enter Your Name" id="inputfield">
+        <input type="text" placeholder="Getting data by .value" id="inputfield">
         <button onclick="handlerclick()">click</button>
 
 
     </body>
     <script>
-
-
-
-        // function addItems() {
-
-        //   let data = ["Monday", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"]
-
-        //   for (i of data) {
-        //     console.log(i)
-
-        //     let listelements = document.createElement("li")
-        //     listelements.innerText = i;
-        //     document.getElementById("list").appendChild(listelements)
-
-        //   }
-        // }
+        function addItems() {
+            let data = ["Monday", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"]
+            for (i of data) {
+                //console.log(i)
+                let listelements = document.createElement("li")
+                listelements.innerText = i;
+                document.getElementById("list").appendChild(listelements)
+            }
+        }
         /*******************************************************************************************/
 
         // add items drrectly from the input on click
-        // function addItems() {
-        //     let userdata = prompt("Enter the data")
-        //     let listelements = document.createElement("li")
-        //     listelements.innerText = userdata;
-        //     document.getElementById("list").appendChild(listelements)
-        // }
+        function addItem() {
+            let userdata = prompt("Enter the data")
+            let listelements = document.createElement("li")
+            listelements.innerText = userdata;
+            document.getElementById("lists").appendChild(listelements)
+        }
 
         /*******************************************************************************************/
         // manuplating elements  diffrent between .innerHtml and
-        // document.getElementById("para").innerHTML = "<h1>Welcome to innova skills </h1>"
-        // document.getElementById("para1").innerText = "<h1>Welcome to innova skills </h1>"
+        document.getElementById("para").innerHTML = "<h1>Welcome to innova skills </h1>"
+        document.getElementById("para1").innerText = "<h1>Welcome to innova skills </h1>"
 
         /*******************************************************************************************/
         //creating and append child()
-        // let para = document.createElement("p")
-        // para.innerHTML = "Pagrapah created bj javaScript "
-        // document.body.appendChild(para)
+        let para = document.createElement("p")
+        para.innerHTML = "Pagrapah created bj javaScript and append child "
+        document.body.appendChild(para)
 
         /*******************************************************************************************/
         //text content()
-        // let para = document.getElementById("para")
-        // console.log(para.textContent)
+        let para1 = document.getElementById("paragraph")
+        console.log(para1.textContent)
 
         /*******************************************************************************************/
         //append and Prepend
-        // let elemenet = document.createElement("h1");
-        // elemenet.innerHTML = "Welcome To Innova Skills"
-        // document.body.append(elemenet)
-        // document.body.prepend(elemenet)
+        let elemenet = document.createElement("h1");
+        elemenet.innerHTML = "Welcome To Innova Skills append an Prepend"
+        //document.body.prepend(elemenet) // Prints the element before all the tags 
+        document.body.append(elemenet)    // Prints the element after all the tags 
 
         /*******************************************************************************************/
         //value used to get user input from inputfields

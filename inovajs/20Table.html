@@ -8,59 +8,51 @@
 </head>
 
 <body>
-
-
-
-
-    <!-- <table id="table">
-        <tr>
-            <th>Sl No</th>
-            <th>First Name</th>
-
-        </tr>
-    </table> -->
-
-    <!-- ***************************************************************************** -->
-
-    <input type="text" placeholder="Enter Your First Name" id="inputdata">
-
-    <button id="adddata" onclick="AddTotable()">Add Data</button>
-
-
+    <h1>Manually addning data from script </h1>
     <table id="table">
         <tr>
             <th>Sl No</th>
             <th>First Name</th>
+        </tr>
+    </table>
+    <br><br>
 
+    <!-- ***************************************************************************** -->
+
+    <h1>Adding data From Input feild to Table</h1>
+    <input type="text" placeholder="Enter Your First Name" id="inputdata">
+    <button id="adddata" onclick="AddTotable()">Add Data</button><br><br>
+    <table id="tables">
+        <tr>
+            <th>Sl No</th>
+            <th>First Name</th>
         </tr>
     </table>
 </body>
 
 <script>
-    // let table = document.getElementById("table");
-    // let insertrows = table.insertRow(-1);
-    // let insertno = insertrows.insertCell();
-    // let insertname = insertrows.insertCell();
-    // insertno.innerHTML = 1;
-    // insertname.innerHTML = "Ravi N";
+    let table = document.getElementById("table");
+    let insertrows = table.insertRow(-1);
+    let insertno = insertrows.insertCell();
+    let insertname = insertrows.insertCell();
+    insertno.innerHTML = 1;
+    insertname.innerHTML = "Ravi N";
 
     /*****************************************************************************/
-    // adding table data from user or in put field 
+    // adding table data from user or input field 
 
     let count = 1;
     function AddTotable() {
         let inputdata = document.getElementById("inputdata");
-        let tabledata = document.getElementById("table");
+        let tabledata = document.getElementById("tables");
         let addrows = tabledata.insertRow(-1)
 
         let insertSlno = addrows.insertCell();
         insertSlno.innerHTML = count;
         count++;
 
-
         let insertName = addrows.insertCell();
         insertName.innerHTML = inputdata.value;
-
     }
 </script>
 

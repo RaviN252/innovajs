@@ -4,13 +4,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>StudentForm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <h1>Getting detials From Form And Adding it to Table </h1>
-    
+    <div class="container">
+        <h1 class="text-center  text-primary my-5">Getting Detials From Form And Adding It To Table </h1>
+        <h1 id="err6" class="text-center text-success"></h1>
+        <div class="text-center my-5">
+            <input type="text" placeholder="Enter Your Name" id="uname" class="col-8 my-2">
+            <p id="err1" class="text-danger"></p>
+            <input type="text" placeholder="Enter Your Email id" id="uemail" class="col-8 my-2">
+            <p id="err2" class="text-danger"></p>
+            <input type="text" placeholder="Enter Your Mobile No" id="unumber" class="col-8 my-2">
+            <p id="err3" class="text-danger"></p>
+            <input type="text" placeholder="Enter Your Password" id="upass" class="col-8 my-2">
+            <p id="err4" class="text-danger"></p>
+            <input type="date" id="udob" class="col-8 my-2"><br>
+            <p id="err5" class="text-danger"></p>
+            <button id="btn" class=" btn btn-primary col-4 my-2">Add Data</button>
+            <button id="btndel" class=" btn btn-primary col-4 my-2">Delete Data</button>
+        </div>
 
+        <table id="table" class="table table-hover ">
+            <tr class="table-light">
+                <th>Sl No</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile No</th>
+                <th>Password</th>
+                <th>D O B</th>
+            </tr>
+        </table>
+    </div>
 </body>
+<script>
+
+    document.getElementById("btn").addEventListener("click", function () {
+        let name = document.getElementById("uname");
+        let email = document.getElementById("uemail");
+        let number = document.getElementById("unumber");
+        let password = document.getElementById("upass");
+        let dateofbirth = document.getElementById("udob");
+
+        let isValid = true;
+
+        if (name.value === "") {
+            document.getElementById("err1").innerHTML = "Please Enter Your Name"
+            isValid = false;
+        } else {
+            document.getElementById("err1").innerHTML = ""
+        }
+        if (email.value === "") {
+            document.getElementById("err2").innerHTML = "Please Enter Your Email"
+            isValid = false;
+        }
+        else {
+            document.getElementById("err2").innerHTML = ""
+        }
+        if (number.value === "") {
+            document.getElementById("err3").innerHTML = "Please Enter Your Number"
+            isValid = false;
+        }
+        else {
+            document.getElementById("err3").innerHTML = ""
+        }
+
+        if (password.value === "") {
+            document.getElementById("err4").innerHTML = "Please Enter Your D O B"
+            isValid = false;
+        }
+        else {
+            document.getElementById("err4").innerHTML = ""
+        }
+        if (dateofbirth.value === "") {
+            document.getElementById("err5").innerHTML = "Please Enter Your Password"
+            isValid = false;
+        }
+        else {
+            document.getElementById("err5").innerHTML = ""
+        }
+        if (isValid) {
+            document.getElementById("err6").innerHTML = "";
+            AddToTable();
+        }
+        else {
+            document.getElementById("err6").innerHTML = " All Fields Are Necessray"
+        }
+    })
+
+
+    let count = 1;
+    function AddToTable() {
+
+
+        let name = document.getElementById("uname");
+        let email = document.getElementById("uemail");
+        let number = document.getElementById("unumber");
+        let password = document.getElementById("upass");
+        let dateofbirth = document.getElementById("udob");
+
+        let tabledata = document.getElementById("table");
+        let addrows = tabledata.insertRow(-1);
+
+        let insertNo = addrows.insertCell(0);
+        insertNo.innerHTML = count;
+        count++;
+
+        let username = addrows.insertCell(1);
+        username.innerHTML = name.value;
+
+        let useremail = addrows.insertCell(2);
+        useremail.innerHTML = email.value;
+
+        let usermobileno = addrows.insertCell(3);
+        usermobileno.innerHTML = number.value;
+
+        let userpassword = addrows.insertCell(4);
+        userpassword.innerHTML = password.value
+
+        let userdob = addrows.insertCell(5);
+        userdob.innerHTML = dateofbirth.value;
+    }
+
+
+
+
+
+
+
+
+
+
+</script>
 
 </html>
