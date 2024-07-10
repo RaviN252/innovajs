@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>Student details name is:</p>
+    <button onclick="getdetails()">Get Data</button>
+
+    <p id="FirstName"></p>
+    <p id="LastName"></p>
+    <p id="DateofBirth"></p>
+    <p id="loaction"></p>
+    <p id="qualification"></p>
+
+
+    <script>
+
+        function getdetails() {
+            localStorage.setItem("First", "Ravi");
+            localStorage.setItem("last", "N")
+            localStorage.setItem("DOB", "26/03/2000")
+            localStorage.setItem("Address", "Lingrajapuram")
+            localStorage.setItem("Education", "Computer Science And Engineering")
+
+
+            // localStorage.removeItem("last");
+            // localStorage.clear();
+
+            document.getElementById("FirstName").innerHTML = localStorage.getItem("First")
+            document.getElementById("LastName").innerHTML = localStorage.getItem("last")
+            document.getElementById("DateofBirth").innerHTML = localStorage.getItem("DOB")
+            document.getElementById("loaction").innerHTML = localStorage.getItem("Address")
+            document.getElementById("qualification").innerHTML = localStorage.getItem("Education")
+
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: rgb(205, 205, 246);
+        }
+
+        .choice {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin-bottom: 2%;
+            font-size: 20px;
+            background-color: whitesmoke;
+            border: 1px solid rgb(86, 86, 156);
+            /* height: 50px; */
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 0rem;
+        }
+
+        .cprefix {
+            padding: 13px;
+            background-color: blue;
+            color: rgb(255, 247, 247);
+            height: auto;
+        }
+
+        .ctext {
+            padding: 13px;
+            width: 100%;
+            background-color: whitesmoke;
+            color: black;
+            height: auto;
+        }
+
+        button {
+            margin-left: 40%;
+            width: 200px;
+            height: 45px;
+            border-radius: 10px;
+            margin-top: 7%;
+        }
+
+        h2 {
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+
+        .ctext:hover {
+            background-color: rgb(178, 224, 209);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center my-5">Welcome To Quiz Game</h1>
+        <h2>Multiple Choice Questions </h2>
+
+        <h2 id="que">Which of the following are the attributes of the
+
+            tag?</h2>
+        <div class="choice">
+            <p class="cprefix">A</p>
+            <p class="ctext" id="opta" onclick="answer()">method</p>
+            <!-- <p class="ctext" id="opta" onclick="answer('answera')">method</p> -->
+        </div>
+        <div class="choice">
+            <p class="cprefix">B</p>
+            <p class="ctext" id="optb" onclick="answer()">Both (a) & (c)</p>
+        </div>
+        <div class="choice">
+            <p class="cprefix">C</p>
+            <p class="ctext" id="optc" onclick="answer()">action</p>
+        </div>
+        <div class="choice">
+            <p class="cprefix">D</p>
+            <p class="ctext" id="optd" onclick="answer()">None of the above</p>
+        </div>
+
+        <button onclick="quizoptions()">Next</button>
+
+
+    </div>
+
+
+</body>
+<script>
+    let arr = [
+        {
+            question: "Full form of HTML",
+            opta: "Hypertexting Markup Language",
+            optb: "Hypertext Marking Language",
+            optc: "Hyper Markup Language",
+            optd: "Hyper text Markup Language",
+        },
+        {
+            question: "A program in HTML can be rendered and read by -",
+            opta: "Web browser",
+            optb: "Server",
+            optc: "Interpreter ",
+            optd: "None of the above ",
+        },
+        {
+            question: "What is the function of the HTML style attribute?",
+            opta: "It is used To add Style to an HTML Element.",
+            optb: " it is used to ",
+            optc: "option C",
+            optd: "option D",
+        },
+        {
+            question: " The < hr > tag in HTML is used for  ",
+            opta: "vertical ruler",
+            optb: "new line",
+            optc: "new paragraph",
+            optd: "horizontal ruler",
+        },
+        {
+            question: "What are the types of unordered or bulleted list in HTML?",
+            opta: "disc, square, triangle",
+            optb: "polygon, triangle, circle",
+            optc: "disc, circle, square",
+            optd: "All of the above",
+        },
+    ]
+
+
+
+    let optanswers = ["Hyper text Markup Language", "Web browser", "It is used To add Style to an HTML Element.", "horizontal ruler", "All of the above"]
+
+    function quizoptions() {
+        let result = arr.at(Math.floor(Math.random() * arr.length));
+        document.getElementById("que").innerHTML = result.question
+        document.getElementById("opta").innerHTML = result.opta
+        document.getElementById("optb").innerHTML = result.optb
+        document.getElementById("optc").innerHTML = result.optc
+        document.getElementById("optd").innerHTML = result.optd
+
+
+    }
+
+    function answer() {
+        // document.getElementById("opta").style.backgroundColor = "lightgreen";
+        // document.getElementById("optb").style.backgroundColor = "lightgreen";
+        // document.getElementById("optc").style.backgroundColor = "lightgreen";
+        // document.getElementById("optd").style.backgroundColor = "lightgreen";
+
+        let answera = document.getElementById("opta")
+        answera.innerHTML = opta.value
+        console.log(opta.value)
+        let answerb = document.getElementById("optb")
+        answerb.innerHTML = optb.value
+        console.log(optb.value)
+        let answerc = document.getElementById("optc")
+        answerc.innerHTML = optc.value
+        console.log(optc.value)
+        let answerd = document.getElementById("optd")
+        answerd.innerHTML = optd.value
+        console.log(optd.value)
+
+        // let correctanswer = document.getElementById(corrans);
+        // correctanswer.innerHTML = corrans.value
+        // console.log(correctanswer)
+
+    }
+
+
+
+    // function color(ColorName) {
+    //         document.body.style.color = ColorName;
+    //     } color()
+
+</script>
+
+</html>
