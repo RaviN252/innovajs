@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random num</title>
+</head>
+
+<body>
+    <button onclick="randomval()">Random</button>
+    <h1 id="bres"></h1>
+    <h1 id="ares"></h1>
+    <h1 id="fres"></h1>
+</body>
+<script>
+    function randomval() {
+        var x = Math.random()
+        document.getElementById("bres").innerHTML = `Before calculation  = ${x}`
+
+        x = x * (100 - 1) + 1;
+        document.getElementById("ares").innerHTML = `After calculation = ${x}`
+
+        y = Math.floor(x)
+        document.getElementById("fres").innerHTML = `Floor calculation = ${y}`
+    }
+
+</script>
+
+</html>

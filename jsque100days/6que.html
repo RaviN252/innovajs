@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert in to miles</title>
+</head>
+
+<body>
+
+    <input type="number" placeholder="Enter The Numbers " id="data">
+    <button onclick="milesconv()">Convert</button>
+    <h1 id="res"></h1>
+</body>
+<script>
+    function milesconv() {
+        let kms = document.getElementById("data").value
+        const factor = 0.621371;
+        var miles = kms * factor;
+        // console.log(miles)
+        document.getElementById('res').innerHTML = ` ${kms} KMS = ${miles} Miles`
+
+    }
+</script>
+
+</html>

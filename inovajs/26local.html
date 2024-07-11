@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: rgb(247, 239, 228);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center text-primary my-5">To Do Check List</h1>
+        <div>
+            <button onclick="addTask()" class="btn btn-primary col">Add Task</button>
+            <button onclick="removeItem()" class="btn btn-danger col">Remove</button>
+        </div>
+
+        <table class="table table-striped my-3" id="table">
+            <thead>
+                <tr id="tablerow">
+                    <th class="text-center my-5">
+                        <h4 class="text-primary">Task</h4>
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let taskCount = 1;
+
+        function addTask() {
+            let taskContent = `Task ${taskCount}: ${localStorage.getItem("Task" + taskCount)}`;
+            let tableBody = document.getElementById("tableBody");
+            let newRow = tableBody.insertRow();
+            let newCell = newRow.insertCell(0);
+            newCell.textContent = taskContent;
+
+            if (taskCount > 7) {
+                alert("There is no orther task to add ")
+            }
+            taskCount++;
+        }
+
+        function removeItem() {
+            const tableBody = document.getElementById("tableBody");
+            if (tableBody.rows.length > 0) {
+                tableBody.deleteRow(-1);
+                taskCount--;
+            }
+
+        }
+
+
+        localStorage.setItem("Task1", "Hello");
+        localStorage.setItem("Task2", "Hello how are you");
+        localStorage.setItem("Task3", "Hello who are you");
+        localStorage.setItem("Task4", "Hello what are you doing");
+        localStorage.setItem("Task5", "Hello why did you come");
+        localStorage.setItem("Task6", "Hello where are you");
+
+    </script>
+</body>
+
+
+
+
+</html>
