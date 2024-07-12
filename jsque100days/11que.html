@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Numbers</title>
+</head>
+
+<body>
+    <h1 id="data"></h1>
+
+</body>
+<script>
+    // //fibanaccio series 
+    // let a = 0
+    // let b = 1
+    // let c
+    // for (i = 0; i < 20; i++) {
+    //     let c = a + b
+
+    //     console.log(c)
+    //     a = b;
+    //     b = c;
+    // }
+
+    // prime or not
+    // a prime number is a positive integer that is only divisible by 1 and it self for ex 2,3,5,7,11
+
+    let number = prompt("please Enter a Number")
+    if (number == 1) {
+        console.log(`${number} Is Neither Prime Nor Composite `)
+    } else if (number < 1) {
+        console.log(`${number} Is Not a Prime Number `)
+    } else {
+        for (let i = 2; i < number; i++)
+            if (number % i == 0) {
+                var res = ` ${number} is Not a Prime Number`;
+                break;
+            }
+            else {
+                var res = ` ${number} is  Prime Number`;
+            }
+            document.getElementById("data").innerHTML = res
+        console.log(res);
+    }
+</script>
+
+</html>

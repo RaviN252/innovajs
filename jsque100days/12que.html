@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="ans"></h1>
+
+</body>
+<script>
+    // let a = 10;
+    // let b = 12;
+    // let c = 14;
+    // let d = Math.max(a, b, c)
+    // console.log(`${d} is the max number`)
+
+    // if (a > b && a > c) {
+    //     res = ` a is maximun`
+    // } else if (b > a && b > c) {
+    //     res = ` b is maximun`
+    // } else if (c > a && c > b) {
+    //     res = ` c is maximun`
+    // }
+
+
+    function check() {
+        var a = parseInt(prompt("Enter The First Number "));
+        var b = parseInt(prompt("Enter The Second Number "));
+        var c = parseInt(prompt("Enter The Third Number "));
+        // res = Math.max(a, b, c)
+
+
+        // if (a > b && a > c) {
+        //     res = a
+        // } else if (b > a && b > c) {
+        //     res = b
+        // } else if (c > a && c > b) {
+        //     res = c
+        // }
+
+        document.getElementById("ans").innerHTML = `${a},${b},${c}: largest is ${res}`
+    } check();
+</script>
+
+</html>
