@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practise</title>
+</head>
+
+<body>
+</body>
+<script>
+
+    function NRS(str) {
+        let charCount = new Map();
+        for (let char of str) {
+            charCount.set(char, (charCount.get(char) || 0) + 1);
+        }
+        for (let char of str) {
+            if (charCount.get(char) === 1) {
+                return char;
+            }
+        }
+        return null;
+    }
+    let inputString = prompt("Enter a string");
+    let result = NRS(inputString);
+    if (result) {
+        alert(`The First Non repeating characte is: ${result}`);
+
+    } else {
+        alert("There is No non-repating character in the string.");
+    }
+</script>
+
+dom is nothing but a document object model
+* it helps us to modify the html and CSS via DOM
+* it also helps hide and make elements and also create new document elements
+* dom stands apart form javascript because other scripting langage could access it
+
+
+</html>
